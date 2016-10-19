@@ -36,7 +36,7 @@ table{border-collapse:collapse;border-spacing:0}
 
 /* GRID BASE & VARIABLES */
 :root{
-	--color: rgb(229, 231, 222);
+	--white: rgb(229, 231, 222);
   --grey: rgb(11, 53, 54);
 	--bg: rgb(245, 65, 35);
 	--gutter: 10;
@@ -84,6 +84,10 @@ html {
 
 p,
 ul,
+ol,
+dl,
+blockquote,
+pre
 h1,
 h2,
 h3,
@@ -106,8 +110,45 @@ h4 { font-size: 200%; }
 h5 { font-size: 150%; }
 h6 { font-size: 100%; }
 
+pre, code {
+  font-family: "inconsolata", monospace;
+  background: var(--grey);
+  border-radius: 0.125rem;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+  pre {
+    padding: 1em 0.5rem;
+    margin: 1.25rem 0 !important;
+    display: block;
+    text-align: left;
+  }
+  code {
+    padding: 0.125rem 0.5rem !important;
+    margin-bottom: 0 !important;
+  }
+    pre > code {
+      background: none;
+    }
+em { font-style: italic; }
+strong {
+  font-weight: 500;
+}
+small {  }
+sup, sub {
+  font-size: 60%;
+  letter-spacing: 0.05rem;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+  sup {
+    position: relative;
+    top: -0.5em;
+    left: 0;
+  }
 a:link, a:visited {
-  color: var(--white);
+	color: var(--white);
   transition: all ease-in-out 0.15s !important;
   text-decoration: underline;
   font-weight: 700;
@@ -115,12 +156,92 @@ a:link, a:visited {
   a:hover, a:focus, a:active {
     opacity: 0.5;
   }
+hr {
+  border: 0;
+  height: 5px;
+  background-color: var(--white);
+  margin-bottom: 0.5rem;
+	display: block;
+  width: 100%;
+}
+kbd {
+  padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+  border: 1px solid rgb(148, 156, 168);
+  border-radius: 0.25rem;
+  box-shadow: inset 0 -2px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* QUOTES */
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  font-family: Georgia, serif;
+  font-size: 125%;
+  font-style: italic;
+}
+blockquote p, blockquote cite {
+  display: block;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+
+
+/* LISTS */
+ul {
+  list-style: none inside;
+}
+ol {
+  list-style: none inside;
+  list-style-type: decimal-leading-zero;
+}
+ol, ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.75rem 0 1.75rem 3rem;
+  font-size: 90%;
+}
+  li {
+    break-inside: avoid;
+  }
+  ol li {
+    text-decoration: underline;
+    padding-bottom: 0.5rem;
+  }
+
+
+
+/* TABLES */
+table {
+  width: 100%;
+}
+  th {
+    color: var(--black);
+  }
+  th, td {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid color(var(--black) tint(75%));
+  }
+    th:first-child, td:first-child {
+      padding-left: 0;
+    }
+    th:last-child, td:last-child {
+      padding-right: 0;
+    }
 
 
 body{
   font-family: 'Karla', sans-serif;
 	background-color: var(--bg);
-  color: var(--color);
+  color: var(--white);
 }
 *{
 	box-sizing: border-box;
@@ -175,3 +296,31 @@ a.skip-main:focus, a.skip-main:active {
   background: no-repeat 25% 50% / cover;
   will-change: transform;
 }
+
+
+
+/* Images and pictures */
+img, img[class] {
+  width: 100%;
+  margin-bottom: var(--gridpadding);
+}
+.object-fit_cover {
+  object-fit: cover;
+}
+
+
+
+picture {
+	display: inline-block;
+	padding-bottom: 62.5%;
+	position: relative;
+	width: 100%;
+}
+  picture img {
+  	object-fit: cover;
+  	display: block;
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0;
+  }
