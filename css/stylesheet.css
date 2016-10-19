@@ -1,0 +1,188 @@
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+pre,textarea{overflow:auto}
+[hidden],audio:not([controls]),template{display:none}
+details,main,summary{display:block}
+input[type=number]{width:auto}
+input[type=search]{-webkit-appearance:textfield}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+progress{display:inline-block}
+small{font-size:60%}
+textarea{resize:vertical}
+[unselectable]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+*,::after,::before{box-sizing:inherit;border-style:solid;border-width:0}
+*{font-size:inherit;line-height:inherit;margin:0;padding:0}
+::after,::before{text-decoration:inherit;vertical-align:inherit}
+:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;box-sizing:border-box;cursor:default;font:16px/1.5 sans-serif;text-rendering:optimizeLegibility}
+a{text-decoration:none}
+audio,canvas,iframe,img,svg,video{vertical-align:middle}
+button,input,select,textarea{background-color:transparent;color:inherit;font-family:inherit;font-style:inherit;font-weight:inherit;min-height:1.5em}
+code,kbd,pre,samp{font-family:monospace,monospace}
+nav ol,nav ul{list-style:none}
+select{-moz-appearance:none;-webkit-appearance:none}
+select::-ms-expand{display:none}
+select::-ms-value{color:currentColor}
+table{border-collapse:collapse;border-spacing:0}
+::-moz-selection{background-color:#B3D4FC;text-shadow:none}
+::selection{background-color:#B3D4FC;text-shadow:none}
+@media screen{[hidden~=screen]{display:inherit}
+[hidden~=screen]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0)!important;position:absolute!important}
+}
+/*# sourceMappingURL=sanitize.css.map */
+
+
+
+/* START HERE */
+:root{
+	--color: rgb(229, 231, 222);
+  --grey: rgb(11, 53, 54);
+	--bg: rgb(245, 65, 35);
+
+	/* Grid */
+	--gutter: 10;
+	--columns: 8;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 calc(var(--gutter) * 2px);
+}
+
+[class*="u-width"]{
+	padding-right: calc(var(--gutter) * 1px);
+	padding-left: calc(var(--gutter) * 1px);
+	flex-basis: calc((100% / var(--columns)) * var(--width));
+}
+
+/* --- Example selectors -- */
+/* Not necessary for the grid to work */
+
+.sidebar{
+	--width: 2;
+}
+
+.content{
+	--width: 6;
+}
+
+
+.u-width--full{
+	--width: var(--columns);
+}
+
+
+/* --- Extending the grid -- */
+
+.m--2{
+	--width: 2;
+}
+
+.m--4{
+	--width: 4;
+}
+
+.m--6{
+	--width: 6;
+}
+
+@media (min-width: 900px ){
+	.l--2{
+		--width: 2;
+	}
+	.l--4{
+		--width: 4;
+	}
+	.l--6{
+		--width: 6;
+	}
+}
+
+
+
+/* TYPOGRAPHY */
+html {
+  font-size: calc(0.75em + 1vw) !important;
+  padding: 2vw !important;
+  line-height: 1.5 !important;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4{
+  margin-top:0;
+  margin-bottom: 0.8rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+h1 { font-size: 400%; }
+h2 { font-size: 300%; }
+h3 { font-size: 250%; }
+h4 { font-size: 200%; }
+h5 { font-size: 150%; }
+h6 { font-size: 100%; }
+
+
+body{
+  font-family: 'Karla', sans-serif;
+	background-color: var(--bg);
+  color: var(--color);
+}
+*{
+	box-sizing: border-box;
+}
+.demo{
+	display: block;
+	padding-bottom: 3em;
+	background-color: var(--grey);
+	margin-bottom: 20px;
+}
+
+pre, code{
+	background-color: rgba(12, 57, 52, 0.1);
+	color: var(--color);
+}
+code{
+	padding: 2px 5px;
+}
+pre{
+	padding: 1em;
+	white-space: pre-wrap;
+}
+
+
+
+/* Skip to main content (required for ARIA pass) */
+a.skip-main {
+  left:-999px;
+  position:absolute;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  z-index:-999;
+}
+a.skip-main:focus, a.skip-main:active {
+  color: #fff;
+  background-color:#000;
+  left: auto;
+  top: auto;
+  width: 30%;
+  height: auto;
+  overflow:auto;
+  margin: 10px 35%;
+  padding:5px;
+  border-radius: 15px;
+  border:4px solid yellow;
+  text-align:center;
+  font-size:1.2em;
+  z-index:999;
+}

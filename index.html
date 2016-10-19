@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>SWIST</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="js/modernizr-custom.js"></script>
+  <style>
+    /* This is for lazy-loading bg images */
+    .lazy {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .lazy-loaded {
+      opacity: 1 !important;
+    }
+    body, main, ::-webkit-scrollbar-thumb {
+      background-color: rgb(245, 65, 35) !important;
+    }
+    .cover::after {
+      background-image: linear-gradient(rgba(245, 65, 35, 0), rgb(245, 65, 35)) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<main>
+  <a class="skip-main" href="#main" tabindex="-1">Skip to main content</a>
+  <div class="cover parallax lazy" data-src="img/header.jpg"></div>
+  <header class="row">
+    <div class="u-width--full">
+      <h1>SWIST</h1>
+    </div>
+  </header>
+
+  <section>
+    <div class="u-wrapper">
+	<div class="row">
+		<div class="u-width--full">
+			<h3>CSS Grid with variables</h3>
+			<p>
+				<strong>Short version:</strong> Instead of precompiling math for our grids we can do it live in the browser using CSS variables, thus saving us a LOT of lines in CSS (...in the future. I'm looking at you Explorer)
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="u-width--full">
+			<p>Here are two elements, lets pretend they're a sidebar and an article element</p>
+		</div>
+		<div class="u-width sidebar">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width content">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width--full">
+			<p>No grid classes classes like <code>col-2</code> or <code>grid-12_lg-8_md-6_sm-4_xs-2</code>. Instead we're using <strong>a variable on each element.</strong> Here's whats going on:</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="u-width--full">
+
+			<p>
+				First off we need to define number of columns and the width of our grid gutters.
+			</p>
+			<pre>
+:root{
+    --column: 8;
+    --gutters: 10;
+}
+</pre>
+			<p>
+				For our own sanity we'll use flexbox.
+			</p>
+
+			<pre>
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gutter) * -1px) ;
+}
+</pre>
+			<p>
+				Flex defaults to 100% width, same as display: block. The negative margins works kind of like calc(100% + 20px) in addition to margin-left: -10px. Just neater. They're crucial to helps us offset the gutters coming from the columns.
+			</p>
+			<h3>
+     The magic ensues.
+</h3>
+
+			<p>We'll make a wildcard selector for our necessary helper class. On its own it doesn't really do much.</p>
+			<pre>
+[class*="u-width"]{
+    padding-right: calc(var(--gutter) * 1px);
+    padding-left: calc(var(--gutter) * 1px);
+    flex-basis: calc((100% / var(--columns)) * var(--width));
+}
+</pre>
+			<p>
+				This selector will kinda work as a function for the most part. Padding for gutters and flex-basis for width. The interesting part here is --width. Because of this variable we can set it on any element that matches our wildcard selector. An example:
+			</p>
+
+			<pre>
+&lt;div class=&quot;u-width sidebar&quot;&gt; ...  &lt;/div&gt;
+</pre>
+
+			<p>
+				If we needed sidebar to be 2 columns wide we can do it simply by:
+			</p>
+			<pre>
+.sidebar{ --width: 2; }
+.content { --width: 4; }
+</pre>
+			<p>
+				This works because variables in CSS are inherited and can be used as a scope. In other words, we just passed the --width to the u-width selector and calc takes care of the rest. Boom. Mic dropped. 14 lines of future vanilla CSS.
+			</p>
+
+			<p>
+				In addtion, you could extend this to be more like any other stand alone grid, but still with a lot less markup.
+			</p>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="u-width--full">
+			<h3>Extending the Grid</h3>
+		</div>
+		<div class="u-width m--2 l--4">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width m--2">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width m--2">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width m--2">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width m--4 l--2">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width m--4 l--4">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width m--6">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width m--2">
+			<div class="demo"></div>
+		</div>
+		<div class="u-width--full">
+			<p>Here we've got a few elements with classes that define their width. I've used <code>
+				&lt;div class=&quot;u-width m--4 l--4&quot;&gt; ...  &lt;/div&gt;
+</code>, but it's really up to you. This is how they're setup: </p>
+			<pre>
+.m--2{ --width: 2; }
+.m--4{ --width: 4; }
+.m--6{ --width: 6; }
+</pre>
+			<p>And that's it really.</p>
+		</div>
+	</div>
+
+</div>
+  </section>
+</main>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" defer></script>
+<script>
+  function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "js/index.min.js";
+    document.body.appendChild(element);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+</script>
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'huh6mpu',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-84586441-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
