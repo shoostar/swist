@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i');
+
+
+
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 pre,textarea{overflow:auto}
 [hidden],audio:not([controls]),template{display:none}
@@ -27,74 +31,39 @@ table{border-collapse:collapse;border-spacing:0}
 @media screen{[hidden~=screen]{display:inherit}
 [hidden~=screen]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0)!important;position:absolute!important}
 }
-/*# sourceMappingURL=sanitize.css.map */
 
 
 
-/* START HERE */
+/* GRID BASE & VARIABLES */
 :root{
 	--color: rgb(229, 231, 222);
   --grey: rgb(11, 53, 54);
 	--bg: rgb(245, 65, 35);
-
-	/* Grid */
 	--gutter: 10;
 	--columns: 8;
 }
-
 .row{
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 calc(var(--gutter) * 2px);
+	margin: 0 calc(var(--gutter) * .15em);
 }
-
-[class*="u-width"]{
-	padding-right: calc(var(--gutter) * 1px);
-	padding-left: calc(var(--gutter) * 1px);
+[class*="m--"]{
+	padding-right: calc(var(--gutter) * .075em);
+	padding-left: calc(var(--gutter) * .075em);
 	flex-basis: calc((100% / var(--columns)) * var(--width));
 }
 
-/* --- Example selectors -- */
-/* Not necessary for the grid to work */
-
-.sidebar{
-	--width: 2;
-}
-
-.content{
-	--width: 6;
-}
 
 
-.u-width--full{
-	--width: var(--columns);
-}
-
-
-/* --- Extending the grid -- */
-
-.m--2{
-	--width: 2;
-}
-
-.m--4{
-	--width: 4;
-}
-
-.m--6{
-	--width: 6;
-}
-
-@media (min-width: 900px ){
-	.l--2{
-		--width: 2;
-	}
-	.l--4{
-		--width: 4;
-	}
-	.l--6{
-		--width: 6;
-	}
+/* GRID SIZING */
+.m--2 { --width: 2; }
+.m--4 { --width: 4; }
+.m--6 { --width: 6; }
+.m--full { --width: var(--columns); }
+@media (min-width: 900px ) {
+	.l--2{ --width: 2; }
+	.l--4{ --width: 4; }
+	.l--6{ --width: 6; }
 }
 
 
@@ -102,7 +71,7 @@ table{border-collapse:collapse;border-spacing:0}
 /* TYPOGRAPHY */
 html {
   font-size: calc(0.75em + 1vw) !important;
-  padding: 2vw !important;
+  padding: 10vw 2vw !important;
   line-height: 1.5 !important;
 }
 
@@ -141,21 +110,10 @@ body{
 }
 .demo{
 	display: block;
-	padding-bottom: 3em;
+	padding: 1em 0;
 	background-color: var(--grey);
-	margin-bottom: 20px;
-}
-
-pre, code{
-	background-color: rgba(12, 57, 52, 0.1);
-	color: var(--color);
-}
-code{
-	padding: 2px 5px;
-}
-pre{
-	padding: 1em;
-	white-space: pre-wrap;
+	margin-bottom: calc(var(--gutter) * .15em);
+  text-align: center;
 }
 
 
