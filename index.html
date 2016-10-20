@@ -22,15 +22,15 @@
       opacity: 1 !important;
     }
     .b-lazy {
-        -webkit-transition: opacity 500ms ease-in-out;
-           -moz-transition: opacity 500ms ease-in-out;
-             -o-transition: opacity 500ms ease-in-out;
-                transition: opacity 500ms ease-in-out;
-                 max-width: 100%;
-                   opacity: 0;
+      -webkit-transition: opacity 500ms ease-in-out;
+         -moz-transition: opacity 500ms ease-in-out;
+           -o-transition: opacity 500ms ease-in-out;
+              transition: opacity 500ms ease-in-out;
+      max-width: 100%;
+      opacity: 0;
     }
     .b-lazy.b-loaded {
-                   opacity: 1;
+      opacity: 1;
     }
   </style>
 </head>
@@ -226,6 +226,45 @@
       </picture>
       <figcaption>
         <small>This is a responsive picture, with GSAP noise added over top of it. The picture is also lazy-loaded; anything can be lazy-loaded on this site.</small>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="row">
+    <figure class="m--4 l--2">
+      <picture class="with-noise">
+        <source data-srcset="https://unsplash.it/g/1920/1080?image=1021" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="default.jpg" />
+      </picture>
+      <figcaption>
+        <small>This is a responsive picture.</small>
+      </figcaption>
+    </figure>
+    <figure class="m--4 l--2">
+      <picture class="with-noise">
+        <source data-srcset="https://unsplash.it/g/1920/1080?image=1023" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="default.jpg" />
+      </picture>
+      <figcaption>
+        <small>This is a responsive picture.</small>
+      </figcaption>
+    </figure>
+    <figure class="m--4 l--2">
+      <picture class="with-noise">
+        <source data-srcset="https://unsplash.it/g/1920/1080?image=1024" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="default.jpg" />
+      </picture>
+      <figcaption>
+        <small>This is a responsive picture.</small>
+      </figcaption>
+    </figure>
+    <figure class="m--4 l--2">
+      <picture class="with-noise">
+        <source data-srcset="https://unsplash.it/g/1920/1080?image=1022" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="default.jpg" />
+      </picture>
+      <figcaption>
+        <small>This is a responsive picture.</small>
       </figcaption>
     </figure>
   </section>
