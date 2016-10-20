@@ -115,13 +115,15 @@
 	</section>
 
   <section class="row">
-    <div class="m--full">
+    <div class="m--full l--4">
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
       <h4>Heading 4</h4>
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
+    </div>
+    <div class="m--full l--4">
       <p><a href="#">This is a regular link</a></p>
       <p><strong>Strong is used to indicate strong importance</strong></p>
       <p><em>This text has added emphasis</em></p>
@@ -143,66 +145,77 @@
       <p><pre><code>This is what inline code looks like.</code></pre></p>
       <p><samp>This is sample output from a computer program</samp></p>
       <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
-      <figure>
-        <table class="u-full-width">
-          <thead>
-            <tr>
-              <th>No.</th>
-              <th>Player</th>
-              <th class="text-right">G</th>
-              <th class="text-right">A</th>
-              <th class="text-right">P</th>
-              <th class="text-right">+/-</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>40</td>
-              <td>H. Zetterberg (C)</td>
-              <td class="text-right">13</td>
-              <td class="text-right">37</td>
-              <td class="text-right">50</td>
-              <td class="text-right">-15</td>
-            </tr>
-            <tr>
-              <td>13</td>
-              <td>P. Datsyuk</td>
-              <td class="text-right">16</td>
-              <td class="text-right">33</td>
-              <td class="text-right">49</td>
-              <td class="text-right">7</td>
-            </tr>
-            <tr>
-              <td>21</td>
-              <td>T. Tatar</td>
-              <td class="text-right">21</td>
-              <td class="text-right">24</td>
-              <td class="text-right">45</td>
-              <td class="text-right">4</td>
-            </tr>
-            <tr>
-              <td>71</td>
-              <td>D. Larkin</td>
-              <td class="text-right">23</td>
-              <td class="text-right">22</td>
-              <td class="text-right">45</td>
-              <td class="text-right">11</td>
-            </tr>
-            <tr>
-              <td>14</td>
-              <td>G. Nyquist</td>
-              <td class="text-right">17</td>
-              <td class="text-right">26</td>
-              <td class="text-right">43</td>
-              <td class="text-right">-2</td>
-            </tr>
-          </tbody>
-        </table>
-        <figcaption>
-          Detroit Red Wings team leaders through 82 games, 2015-2016 season.
-        </figcaption>
-      </figure>
     </div>
+  </section>
+
+  <section class="row">
+    <figure class="m--full l--4">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Player</th>
+            <th class="text-right">G</th>
+            <th class="text-right">A</th>
+            <th class="text-right">P</th>
+            <th class="text-right">+/-</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>40</td>
+            <td>H. Zetterberg (C)</td>
+            <td class="text-right">13</td>
+            <td class="text-right">37</td>
+            <td class="text-right">50</td>
+            <td class="text-right">-15</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>P. Datsyuk</td>
+            <td class="text-right">16</td>
+            <td class="text-right">33</td>
+            <td class="text-right">49</td>
+            <td class="text-right">7</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>T. Tatar</td>
+            <td class="text-right">21</td>
+            <td class="text-right">24</td>
+            <td class="text-right">45</td>
+            <td class="text-right">4</td>
+          </tr>
+          <tr>
+            <td>71</td>
+            <td>D. Larkin</td>
+            <td class="text-right">23</td>
+            <td class="text-right">22</td>
+            <td class="text-right">45</td>
+            <td class="text-right">11</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>G. Nyquist</td>
+            <td class="text-right">17</td>
+            <td class="text-right">26</td>
+            <td class="text-right">43</td>
+            <td class="text-right">-2</td>
+          </tr>
+        </tbody>
+      </table>
+      <figcaption>
+        <small>Detroit Red Wings team leaders through 82 games, 2015-2016 season.</small>
+      </figcaption>
+    </figure>
+    <figure class="m--full l--4">
+      <picture class="with-noise">
+        <img src="https://unsplash.it/1920/1080?image=1021" alt="" />
+      </picture>
+      <figcaption>
+        <small>This is a responsive picture, with GSAP noise added over top of it. The picture is also lazy-loaded; anything can be lazy-loaded on this site.</small>
+      </figcaption>
+    </figure>
   </section>
 </main>
 
