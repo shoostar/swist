@@ -78,7 +78,7 @@ table{border-collapse:collapse;border-spacing:0}
 /* TYPOGRAPHY */
 html {
   font-size: calc(0.625em + 1vw) !important;
-  padding: 10vw 2vw !important;
+  padding: 10vw 0vw !important;
   line-height: 1.5 !important;
 }
 
@@ -226,7 +226,7 @@ table {
     color: var(--black);
   }
   th, td {
-    padding: 1em;
+    padding: 0.8rem 0;
     text-align: left;
     border-bottom: 1px solid color(var(--black) tint(75%));
   }
@@ -268,14 +268,14 @@ a.skip-main {
 }
 a.skip-main:focus, a.skip-main:active {
   color: #fff;
-  background-color:#000;
+  background-color: #000;
   left: auto;
   top: auto;
   width: 30%;
   height: auto;
   overflow:auto;
   margin: 10px 35%;
-  padding:5px;
+  padding: 5px;
   border-radius: 15px;
   border:4px solid yellow;
   text-align:center;
@@ -286,15 +286,15 @@ a.skip-main:focus, a.skip-main:active {
 
 /* Parallax bullshit */
 .cover {
-	position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+	position: relative;
   width: 100%;
   height: 31.8em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
   z-index: -1;
-  background: no-repeat 25% 50% / cover;
-  will-change: transform;
+	padding: calc(var(--gutter) * .15em);
+  background: no-repeat 50% 50% / cover;
 }
 
 
@@ -302,6 +302,7 @@ a.skip-main:focus, a.skip-main:active {
 /* Images and pictures */
 img, img[class] {
   width: 100%;
+	background-color: var(--grey);
 }
 
 
@@ -339,7 +340,7 @@ picture {
   position: absolute;
   top: -100%;
   width: 300%;
-  opacity: 0.5;
+  opacity: 0.666;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
