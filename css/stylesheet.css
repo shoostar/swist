@@ -302,7 +302,6 @@ a.skip-main:focus, a.skip-main:active {
 /* Images and pictures */
 img, img[class] {
   width: 100%;
-	background-color: var(--grey);
 }
 
 
@@ -321,7 +320,9 @@ picture {
   	width: 100%;
   	top: 0;
   }
-
+figure {
+  margin-bottom: calc(var(--gutter) * .15em);
+}
 
 
 /* Noise on images */
