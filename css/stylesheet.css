@@ -288,10 +288,12 @@ a.skip-main:focus, a.skip-main:active {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-  z-index: -1;
 	padding: calc(var(--gutter) * .15em);
   background: no-repeat 50% 50% / cover;
 }
+  .cover * {
+    z-index: 10;
+  }
 
 
 
