@@ -235,12 +235,9 @@ table {
 
 
 body{
-  font-family: 'Karla', sans-serif;
+  font-family: 'aktiv-grotesk', sans-serif;
 	background-color: var(--bg);
   color: var(--white);
-}
-*{
-	box-sizing: border-box;
 }
 .demo{
 	display: block;
