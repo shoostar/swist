@@ -131,7 +131,9 @@ em { font-style: italic; }
 strong {
   font-weight: 500;
 }
-small {  }
+figcaption {
+  line-height: calc(1.5 * .6) !important;
+}
 sup, sub {
   font-size: 60%;
   letter-spacing: 0.05rem;
