@@ -43,7 +43,7 @@ table{border-collapse:collapse;border-spacing:0}
 	flex-wrap: wrap;
 	margin: 0 calc(var(--gutter) * .15em) calc(var(--gutter) * .15em);
 }
-[class*="m--"]{
+[class*="m--"] {
 	padding-right: calc(var(--gutter) * .075em);
 	padding-left: calc(var(--gutter) * .075em);
 	flex-basis: calc((100% / var(--columns)) * var(--width));
