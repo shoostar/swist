@@ -220,6 +220,8 @@ ol ul {
 /* TABLES */
 table {
   width: 100%;
+
+  border-collapse: collapse;
 }
   th {
     color: var(--black);
@@ -235,8 +237,24 @@ table {
     th:last-child, td:last-child {
       padding-right: 0;
     }
+/* DOTTED LEADER LIST-STYLE TABLES */
+.dotted tbody td {
+  vertical-align: bottom;
+  background-image: radial-gradient(red 1px, transparent 0px);
+  background-size: 8px 8px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+}
+.dotted tbody td:first-child {
+  text-align: left;
+}
+  .dotted tbody td:last-child {
+    text-align:right;
+  }
 
 
+
+/* MAIN SHIT */
 body{
   font-family: 'aktiv-grotesk', sans-serif;
 	background-color: var(--bg);
