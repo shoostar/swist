@@ -38,6 +38,10 @@ table{border-collapse:collapse;border-spacing:0}
 	--gutter: 10;
 	--columns: 8;
 }
+.container {
+  max-width: 60em;
+  margin: 0 auto;
+}
 .row{
 	display: flex;
 	flex-wrap: wrap;
@@ -273,10 +277,7 @@ body{
   text-align: center;
 	margin-bottom: calc(var(--gutter) * .15em);
 }
-.container {
-  max-width: 50em;
-  margin: 0 auto;
-}
+
 
 
 /* Skip to main content (required for ARIA pass) */
