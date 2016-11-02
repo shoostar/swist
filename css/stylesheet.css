@@ -133,7 +133,7 @@ pre, code {
     }
 em { font-style: italic; }
 strong {
-  font-weight: 500;
+  font-weight: 700;
 }
 figcaption {
   line-height: calc(1.5 * .6) !important;
@@ -229,36 +229,12 @@ table {
   th {
     color: var(--black);
   }
+    tr {
+      border-bottom: 1px dotted var(--grey);
+    }
   th, td {
     padding: 0.8rem 0 0;
     text-align: left;
-    border-bottom: 1px solid var(--grey);
-  }
-    th:first-child, td:first-child {
-      padding-left: 0;
-    }
-    th:last-child, td:last-child {
-      padding-right: 0;
-    }
-/* DOTTED LEADER LIST-STYLE TABLES */
-.dotted th, .dotted td {
-  border-bottom: none;
-}
-.dotted td {
-	vertical-align: bottom;
-	background-image: radial-gradient(red 1px, transparent 0px);
-	background-size: 8px 8px;
-	background-repeat: repeat-x;
-	background-position: left 1.6em;
-}
-  .dotted td span{
-   	background-color: var(--bg);
-	}
-.dotted td:first-child {
-  text-align: left;
-}
-  .dotted td:last-child {
-    text-align: right;
   }
 
 
@@ -277,6 +253,15 @@ body{
   text-align: center;
 	margin-bottom: calc(var(--gutter) * .15em);
 }
+
+
+
+/* UTILITIES */
+.lightenup { color: color(var(--white) alpha(13.8%)); }
+.topless { margin-top: 0 !important; }
+.bottomless { margin-bottom: 0 !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
 
 
 
