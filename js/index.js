@@ -5,6 +5,13 @@ $('p').each(function() {
 
 
 
+// Progress bar
+var perc = $(".progress").data().percentage;
+$('.progress').css("width", perc + '%');
+$('.progress-count').html(perc + '%');
+
+
+
 // Simple slider
 $(document).ready(function(){
   $('.slider').slick({

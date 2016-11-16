@@ -323,6 +323,34 @@ a.skip-main:focus, a.skip-main:active {
 
 
 
+/* Progress bar */
+.progressbar {
+  width: 100%;
+  background: #a2a3a4;
+  height: 100%;
+  position: relative;
+}
+
+.progressbar .progress {
+  height: 100%;
+}
+
+.progress-count {
+  color: var(--blue);
+  position: relative;
+  top: 0.1875em;
+  right: 10px;
+  line-height: 0.5;
+}
+.progress {
+  background: var(--blue);
+}
+header {
+  margin-bottom: calc(var(--gutter) * 0.5em) !important;
+}
+
+
+
 /* Images and pictures */
 img, img[class] {
   width: 100%;
