@@ -62,6 +62,7 @@ table{border-collapse:collapse;border-spacing:0}
 .m--4 { --width: 4; }
 .m--5 { --width: 5; }
 .m--6 { --width: 6; }
+.m--7 { --width: 7; }
 .m--full { --width: var(--columns); }
 @media (min-width: 900px ) {
 	.l--1 { --width: 1; }
@@ -70,6 +71,7 @@ table{border-collapse:collapse;border-spacing:0}
 	.l--4 { --width: 4; }
 	.l--5 { --width: 5; }
 	.l--6 { --width: 6; }
+	.l--7 { --width: 7; }
 	.l--full { --width: var(--columns); }
 }
 
@@ -296,18 +298,28 @@ a.skip-main:focus, a.skip-main:active {
 /* Parallax bullshit */
 .cover {
   color: var(--bg);
-	position: relative;
+	position: absolute;
+	top: 0;
+	z-index: -1;
   width: 100%;
   height: 31.8em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: calc(var(--gutter) * .15em);
+	padding-top: calc(var(--gutter) * .15em);
   background: no-repeat 50% 50% / cover;
 }
-  .cover * {
-    z-index: 10;
-  }
+  /*.cover::after {
+		background: linear-gradient(to right, rgba(255,93,177,1) 0%, rgba(239,1,124,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c', GradientType=1 );
+		height: 100%;
+		width: 100%;
+		display: block;
+		content: 'SHIT';
+		position: absolute;
+		z-index: 100;
+		top: 0;
+  }*/
 
 
 
