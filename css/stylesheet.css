@@ -30,6 +30,70 @@ table{border-collapse:collapse;border-spacing:0}
 
 
 
+/* Fade-in ALL the things */
+body{
+  animation: fadein 0.25s ease-out;
+  animation-delay: 0.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+  @keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+  }
+  ::-webkit-scrollbar-track {
+    border: none;
+    background-color: color(var(--black) shade(81.3%));
+  }
+
+
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading h3,
+.wf-loading h4,
+.wf-loading h5,
+.wf-loading h6,
+.wf-loading p,
+.wf-loading ul,
+.wf-loading a,
+.wf-loading hr,
+.wf-loading use {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: opacity ease-in-out 0.5s !important;
+}
+.wf-active h1,
+.wf-active h2,
+.wf-active h3,
+.wf-active h4,
+.wf-active h5,
+.wf-active h6,
+.wf-active p,
+.wf-active ul,
+.wf-active a,
+.wf-active hr,
+.wf-active use
+.wf-inactive h1,
+.wf-inactive h2,
+.wf-inactive h3,
+.wf-inactive h4,
+.wf-inactive h5,
+.wf-inactive h6,
+.wf-inactive p,
+.wf-inactive ul,
+.wf-inactive a,
+.wf-inactive hr,
+.wf-inactive use {
+  opacity: 1 !important;
+  transition: opacity ease-in-out 0.5s !important;
+}
+
+
+
 /* GRID BASE & VARIABLES */
 :root{
 	--blue: rgb(54, 0, 252);
