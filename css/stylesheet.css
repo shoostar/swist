@@ -376,17 +376,6 @@ a.skip-main:focus, a.skip-main:active {
 	padding-top: calc(var(--gutter) * .15em);
   background: no-repeat 50% 50% / cover;
 }
-  /*.cover::after {
-		background: linear-gradient(to right, rgba(255,93,177,1) 0%, rgba(239,1,124,1) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c', GradientType=1 );
-		height: 100%;
-		width: 100%;
-		display: block;
-		content: 'SHIT';
-		position: absolute;
-		z-index: 100;
-		top: 0;
-  }*/
 
 
 
@@ -411,6 +400,7 @@ a.skip-main:focus, a.skip-main:active {
 }
 .progress {
   background: var(--blue);
+  border-right: 1px solid var(--bg);
 }
 header {
   margin-bottom: calc(var(--gutter) * 0.5em) !important;
