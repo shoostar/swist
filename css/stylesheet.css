@@ -361,6 +361,7 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 
+
 /* Parallax bullshit */
 .cover {
   color: var(--bg);
@@ -402,6 +403,15 @@ a.skip-main:focus, a.skip-main:active {
   background: var(--blue);
   border-right: 1px solid var(--bg);
 }
+  .progress:after {
+    content: 'PROGRESS';
+    color: var(--bg);
+    font-weight: 700;
+    display: block;
+    position: relative;
+    top: 0.375em;
+    left: 0.5em;
+  }
 header {
   margin-bottom: calc(var(--gutter) * 0.5em) !important;
 }
