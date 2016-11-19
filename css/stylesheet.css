@@ -460,7 +460,7 @@ figure {
     position: absolute;
     top: -100%;
     width: 300%;
-    opacity: 0.666;
+    opacity: 0.35;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
