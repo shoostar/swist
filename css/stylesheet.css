@@ -369,8 +369,7 @@ a.skip-main:focus, a.skip-main:active {
 	top: 0;
 	z-index: -1;
   width: 100%;
-  height: 100vh;
-  min-height: 31.8em;
+  height: 40em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
