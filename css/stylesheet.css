@@ -96,14 +96,14 @@ body{
 
 /* GRID BASE & VARIABLES */
 :root{
-	--blue: rgb(54, 0, 252);
-  --grey: rgb(11, 53, 54);
-	--bg: rgb(239, 241, 232);
+	--red: rgb(178, 18, 18);
+  --grey: rgb(3, 7, 6);
+	--bg: rgb(10, 22, 22);
 	--gutter: 10;
 	--columns: 8;
 }
 .container {
-  background: white;
+  background: var(--grey);
   max-width: 60em;
   margin: 0 auto;
   padding-top: calc(var(--gutter) * .3em);
@@ -180,7 +180,7 @@ h6 { font-size: 100%; }
 
 pre, code {
   font-family: "inconsolata", monospace;
-  background: var(--blue);
+  background: var(--red);
   color: var(--bg);
   border-radius: 0.125rem;
   overflow-wrap: break-word !important;
@@ -219,7 +219,7 @@ sup, sub {
     left: 0;
   }
 a:link, a:visited {
-	color: var(--blue);
+	color: var(--red);
   transition: all ease-in-out 0.15s !important;
   text-decoration: underline;
   font-weight: 700;
@@ -230,7 +230,7 @@ a:link, a:visited {
 hr {
   border: 0;
   height: 5px;
-  background-color: var(--blue);
+  background-color: var(--red);
   margin-bottom: 1rem;
 	display: block;
   width: 100%;
@@ -311,12 +311,12 @@ table {
 body{
   font-family: 'aktiv-grotesk', sans-serif;
 	background-color: var(--bg);
-  color: var(--blue);
+  color: var(--red);
 }
 .demo{
 	display: block;
 	padding: 1em 0;
-	background-color: var(--blue);
+	background-color: var(--red);
   color: var(--bg);
   text-align: center;
 	margin-bottom: calc(var(--gutter) * .15em);
@@ -364,7 +364,7 @@ a.skip-main:focus, a.skip-main:active {
 
 /* Parallax bullshit */
 .cover {
-  color: var(--bg);
+  color: var(--red);
 	position: absolute;
 	top: 0;
 	z-index: -1;
@@ -375,6 +375,17 @@ a.skip-main:focus, a.skip-main:active {
 	justify-content: space-between;
 	padding-top: calc(var(--gutter) * .15em);
   background: no-repeat 50% 50% / cover;
+}
+.cover ::after {
+  height: 5em;
+  width: 100%;
+  display: block;
+  content: '';
+  background-image: linear-gradient(rgba(10, 22, 22, 0), rgba(10, 22, 22, 1));
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index:0;
 }
 
 
@@ -392,14 +403,14 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 .progress-count {
-  color: var(--blue);
+  color: var(--red);
   position: relative;
   top: 0.1875em;
   right: 10px;
   line-height: 0.5;
 }
 .progress {
-  background: var(--blue);
+  background: var(--red);
   border-right: 1px solid var(--bg);
 }
   .progress:after {
@@ -459,7 +470,7 @@ figure {
     position: absolute;
     top: -100%;
     width: 300%;
-    opacity: 0.35;
+    opacity: 0.25;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
