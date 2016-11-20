@@ -298,7 +298,7 @@ table {
     color: var(--black);
   }
     tr {
-      border-bottom: 1px dotted var(--grey);
+      border-bottom: 1px dotted var(--bg);
     }
   th, td {
     padding: 0.8rem 0 0;
