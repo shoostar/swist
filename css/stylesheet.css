@@ -414,7 +414,7 @@ a.skip-main:focus, a.skip-main:active {
   border-right: 1px solid var(--bg);
 }
   .progress:after {
-    content: 'PROGRESS';
+    content: 'PROGRESS (V1.41)';
     color: var(--bg);
     font-weight: 700;
     display: block;
