@@ -57,19 +57,3 @@ function debounce(fn, wait) {
     }, (wait || 1));
   }
 }
-
-
-
-// Simple slider
-$(document).ready(function(){
-  $('.slider').slick({
-    draggable: true,
-    arrows: true,
-    dots: true,
-    speed: 900,
-    infinite: true,
-    autoplay: true,
-    slidesPerView: 1,
-    touchThreshold: 100
-  });
-});

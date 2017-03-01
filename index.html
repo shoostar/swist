@@ -8,7 +8,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/slick.css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script src="js/modernizr-custom.min.js"></script>
   <style>
@@ -25,7 +24,7 @@
 <body>
 
 <div class="cover parallax lazy with-grain" data-src="https://unsplash.it/g/2000/3000/?image=0">
-  <header class="row">
+  <header class="row container">
     <div class="m--full">
       <h1>SWIST+</h1>
       <h6>A SIMPLE WEB FRAMEWORK</h6>
@@ -33,9 +32,9 @@
   </header>
 </div>
 
-<main class="container">
+<main>
   <a class="skip-main" href="#main" tabindex="-1">Skip to main content</a>
-  <section class="row">
+  <section class="row container">
     <div class="m--full">
       <h1>OVERVIEW</h1>
       <hr>
@@ -93,7 +92,7 @@
     </div>
 	</section>
 
-  <section class="row">
+  <section class="row container">
     <div class="m--full">
       <h1>TYPOGRAPHY</h1>
       <hr>
@@ -130,58 +129,16 @@
       <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
     </div>
   </section>
-
-  <section class="row">
-    <div class="m--full">
-      <h1>UTILITIES</h1>
-      <hr>
-    </div>
-    <div class="m--full">
-      <h5>Responsive image slider, touch-enabled</h5>
-      <p>I've included a simple slider based on Slick Slider. A good majority of the features have been trimmed back (such as R-to-L reading mode), but I've made sure to allow for touch-enabled devices, as well as having a responsive scalability.</p>
-      <div class="slider">
-        <div class="item">
-          <figure>
-            <picture class="with-grain">
-              <source data-srcset="https://unsplash.it/g/2000/3000/?image=1077" />
-              <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="https://unsplash.it/g/2000/3000/?image=1077" />
-            </picture>
-            <figcaption>
-              <small>Image caption</small>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="item">
-          <figure>
-            <picture class="with-grain">
-              <source data-srcset="https://unsplash.it/g/2000/3000/?image=813" />
-              <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="https://unsplash.it/g/2000/3000/?image=813" />
-            </picture>
-            <figcaption>
-              <small>Image caption</small>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="item">
-          <figure>
-            <picture class="with-grain">
-              <source data-srcset="https://unsplash.it/g/2000/3000/?image=216" />
-              <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="https://unsplash.it/g/2000/3000/?image=216" />
-            </picture>
-            <figcaption>
-              <small>Image caption</small>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
+<footer class="row container">
+  <div class="m--full">
+    <h1>Thanks for looking :)</h1>
+    <hr>
+  </div>
+</footer>
+
 <script src="//code.jquery.com/jquery-2.2.4.min.js" defer></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" defer></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" defer></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" defer></script>
 <script>
   function downloadJSAtOnload() {
     var element = document.createElement("script");
