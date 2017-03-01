@@ -42,57 +42,60 @@
     </div>
 		<div class="m--full l--4">
       <h5>Mathematically Simple</h5>
-			<p>Everything in SWIST+ is calculated on the fly, from colors, to width, font sizes, gutters, columns, etc.</p>
+			<p>Everything in SWIST+ is calculated on the fly, from colors, width, and font sizes, to gutters, columns, margins and padding. Now that CSS3 allows for the use of variables without a preprocessor, we can explicitly set variables, and then use them wherever we please using the <code>calc();</code> function so that we can simply perform the math at run-time.</p>
+      <p>The codebase is rather fat right now, but I'm working on chunking it down as much as possible, while still retaining some useful features (like the touch-enabled slider). The size of the index.html file will more than likely grow as I add new examples, but I'm going to do my best to trim back the rest. I am also going to include some other shit, like form inputs and generic article/media layouts.</p>
 		</div>
-    <figure class="m--full l--4">
+    <div class="m--full l--4">
       <figure>
         <picture class="with-grain">
           <source data-srcset="https://unsplash.it/g/2000/3000/?image=1042" />
           <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="https://unsplash.it/g/2000/3000/?image=1042" />
         </picture>
         <figcaption>
-          <small>Image caption</small>
+          <small>This image is responsive, has GSAP noise protection, and is also lazy-loaded.</small>
         </figcaption>
       </figure>
       <h5>File Sizes</h5>
-      <table>
-        <tbody>
-          <tr>
-            <td>index.html</td>
-            <td class="text-right">8.5kb / +219</td>
-          </tr>
-          <tr>
-            <td>stylesheet.css*</td>
-            <td class="text-right">11.2kb / +526</td>
-          </tr>
-          <tr>
-            <td>slick.css</td>
-            <td class="text-right">3.7kb / +198</td>
-          </tr>
-          <tr>
-            <td>index.js**</td>
-            <td class="text-right">1.5kb / +76</td>
-          </tr>
-          <tr>
-            <td>index.min.js (minified)</td>
-            <td class="text-right">1.06kb / +1</td>
-          </tr>
-          <tr>
-            <td>modernizr-custom.min.js (minified)</td>
-            <td class="text-right">6.08kb / +3</td>
-          </tr>
-        </tbody>
-      </table>
-      <figcaption>
-        <small><strong>*</strong> stylesheet.css needs to be compressed, regardless of its small exploded size.</small><br>
-        <small><strong>**</strong> index.js was compressed using UglifyJS.</small>
-      </figcaption>
-    </figure>
+      <figure>
+        <table>
+          <tbody>
+            <tr>
+              <td>index.html</td>
+              <td class="text-right">8.5kb / +219</td>
+            </tr>
+            <tr>
+              <td>stylesheet.css*</td>
+              <td class="text-right">11.2kb / +526</td>
+            </tr>
+            <tr>
+              <td>slick.css</td>
+              <td class="text-right">3.7kb / +198</td>
+            </tr>
+            <tr>
+              <td>index.js**</td>
+              <td class="text-right">1.5kb / +76</td>
+            </tr>
+            <tr>
+              <td>index.min.js (minified)</td>
+              <td class="text-right">1.06kb / +1</td>
+            </tr>
+            <tr>
+              <td>modernizr-custom.min.js (minified)</td>
+              <td class="text-right">6.08kb / +3</td>
+            </tr>
+          </tbody>
+        </table>
+        <figcaption>
+          <small><strong>*</strong> stylesheet.css needs to be compressed, regardless of its small exploded size.</small><br>
+          <small><strong>**</strong> index.js was compressed using UglifyJS.</small>
+        </figcaption>
+      </figure>
+    </div>
 	</section>
 
   <section class="row">
     <div class="m--full">
-      <h1>UTILITIES</h1>
+      <h1>TYPOGRAPHY</h1>
       <hr>
     </div>
     <div class="m--full l--4">
@@ -130,10 +133,12 @@
 
   <section class="row">
     <div class="m--full">
-      <h1>SLIDER</h1>
+      <h1>UTILITIES</h1>
       <hr>
     </div>
-    <div class="m--full" style="width: 100%;">
+    <div class="m--full">
+      <h5>Responsive image slider, touch-enabled</h5>
+      <p>I've included a simple slider based on Slick Slider. A good majority of the features have been trimmed back (such as R-to-L reading mode), but I've made sure to allow for touch-enabled devices, as well as having a responsive scalability.</p>
       <div class="slider">
         <div class="item">
           <figure>
