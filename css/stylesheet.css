@@ -106,17 +106,23 @@ main {
   background: var(--bg);
   width: 100%;
   margin: 0 auto;
-  padding: calc(var(--gutter) * .3em) 0;
+  padding: 0 0 calc(var(--gutter) * .3em);
 }
 .container {
   width: 100%;
   margin: 0 calc(var(--gutter) * .15em);
-  padding: calc(var(--gutter) * .3em) 0;
+  padding: calc(var(--gutter) * .3em) 0 0;
 }
   @media (min-width: 900px ) {
     .container {
-      padding-left: calc(var(--gutter) * 2em);
-      padding-right: calc(var(--gutter) * 2em);
+      padding-left: calc(var(--gutter) * 0.5em);
+      padding-right: calc(var(--gutter) * 0.5em);
+    }
+  }
+  @media (min-width: 1400px ) {
+    .container {
+      padding-left: calc(var(--gutter) * 1em);
+      padding-right: calc(var(--gutter) * 1em);
     }
   }
 .row{
@@ -124,15 +130,29 @@ main {
 	flex-wrap: wrap;
 	margin: 0;
 }
+
+
+
+/* ORIGINAL GRIDLET CLASS */
 [class*="m--"] {
-	padding-right: calc(var(--gutter) * .075em);
-	padding-left: calc(var(--gutter) * .075em);
+	padding-right: calc(var(--gutter) * .1em);
+	padding-left: calc(var(--gutter) * .1em);
 	flex-basis: calc((100% / var(--columns)) * var(--width));
 }
 
 
 
-/* GRID SIZING */
+/* UPDATED GRIDLET CLASS */ /*
+[class*="m--"] {
+	padding-right: calc(var(--gutter) * .1em);
+	padding-left: calc(var(--gutter) * .1em);
+	flex-basis: calc((100% / var(--columns)) * var(--width));
+}
+UNCOMMENT TO USE, BUT DELETE THE ORIGINAL GRIDLET CLASS! */
+
+
+
+/* ORIGINAL GRID SIZING */
 .m--1 { --width: 1; }
 .m--2 { --width: 2; }
 .m--3 { --width: 3; }
@@ -151,6 +171,39 @@ main {
 	.l--7 { --width: 7; }
 	.l--full { --width: var(--columns); max-width: 100%; }
 }
+
+
+
+/* UPDATED GRID SIZING */ /*
+.s--1 { --width: 1; }
+.s--2 { --width: 2; }
+.s--3 { --width: 3; }
+.s--4 { --width: 4; }
+.s--5 { --width: 5; }
+.s--6 { --width: 6; }
+.s--7 { --width: 7; }
+.s--full { --width: var(--columns); max-width: 100%; }
+@media (min-width: 900px ) {
+  .m--1 { --width: 1; }
+  .m--2 { --width: 2; }
+  .m--3 { --width: 3; }
+  .m--4 { --width: 4; }
+  .m--5 { --width: 5; }
+  .m--6 { --width: 6; }
+  .m--7 { --width: 7; }
+  .m--full { --width: var(--columns); max-width: 100%; }
+}
+@media (min-width: 1400px ) {
+	.l--1 { --width: 1; }
+	.l--2 { --width: 2; }
+	.l--3 { --width: 3; }
+	.l--4 { --width: 4; }
+	.l--5 { --width: 5; }
+	.l--6 { --width: 6; }
+	.l--7 { --width: 7; }
+	.l--full { --width: var(--columns); max-width: 100%; }
+}
+UNCOMMENT TO USE, BUT DELETE THE ORIGINAL GRID SIZING! */
 
 
 
@@ -328,6 +381,7 @@ header *, footer * {
 }
 footer {
   background: var(--primary);
+  padding-bottom: calc(var(--gutter) * .3em) !important;
 }
 
 
@@ -381,7 +435,6 @@ a.skip-main:focus, a.skip-main:active {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding-top: calc(var(--gutter) * .15em);
   background: no-repeat 50% 50% / cover;
 }
 
