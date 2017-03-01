@@ -1,30 +1,26 @@
 // Widows
-$('p').each(function() {
-  $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1'));
-});
+// $('p').each(function() {
+//   $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1'));
+// });
 
 
 
-// Progress bar
-var perc = $(".progress").data().percentage;
-$('.progress').css("width", perc + '%');
-$('.progress-count').html(perc + '%');
-
-
-
-// Simple slider
-$(document).ready(function(){
-  $('.slider').slick({
-    draggable: true,
-    arrows: true,
-    dots: true,
-    fade: false,
-    speed: 900,
-    infinite: true,
-    autoplay: true,
-    slidesPerView: 1,
-    touchThreshold: 100
+// Lazy load backgrounds
+function lazyLoadBg(el, imageSource) {
+  $('<img/>').attr('src', imageSource).on({
+    load: function() {
+      $(this).remove();
+      $(el).css('backgroundImage', 'url(' + imageSource + ')');
+      $(el).css('opacity', '1');
+    },
+    error: function() {
+      $(this).remove();
+    }
   });
+}
+
+$('.lazy').each(function(index, el) {
+  lazyLoadBg(el, $(el).data('src'));
 });
 
 
@@ -61,3 +57,20 @@ function debounce(fn, wait) {
     }, (wait || 1));
   }
 }
+
+
+
+// Simple slider
+$(document).ready(function(){
+  $('.slider').slick({
+    draggable: true,
+    arrows: true,
+    dots: true,
+    fade: false,
+    speed: 900,
+    infinite: true,
+    autoplay: true,
+    slidesPerView: 1,
+    touchThreshold: 100
+  });
+});
