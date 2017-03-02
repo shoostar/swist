@@ -1,7 +1,7 @@
 // Widows
-// $('p').each(function() {
-//   $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1'));
-// });
+$('p').each(function() {
+  $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1'));
+});
 
 
 

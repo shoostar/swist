@@ -47,7 +47,7 @@ body{
   }
   ::-webkit-scrollbar-track {
     border: none;
-    background-color: color(var(--bg) shade(81.3%));
+    background-color: var(--secondary);
   }
 
 
@@ -136,7 +136,7 @@ main {
 
 
 /* GRIDLET CLASS */
-[class*="s--"] {
+[class^="gridlet__"] {
 	padding-right: calc(var(--gutter) * .1em);
 	padding-left: calc(var(--gutter) * .1em);
 	flex-basis: calc((100% / var(--columns)) * var(--width));
@@ -145,33 +145,33 @@ main {
 
 
 /* GRID SIZING */
-.s--1 { --width: 1; }
-.s--2 { --width: 2; }
-.s--3 { --width: 3; }
-.s--4 { --width: 4; }
-.s--5 { --width: 5; }
-.s--6 { --width: 6; }
-.s--7 { --width: 7; }
-.s--full { --width: var(--columns); max-width: 100%; }
+.gridlet__s--1 { --width: 1; }
+.gridlet__s--2 { --width: 2; }
+.gridlet__s--3 { --width: 3; }
+.gridlet__s--4 { --width: 4; }
+.gridlet__s--5 { --width: 5; }
+.gridlet__s--6 { --width: 6; }
+.gridlet__s--7 { --width: 7; }
+.gridlet__s--full { --width: var(--columns); max-width: 100%; }
 @media (min-width: 900px ) {
-  .m--1 { --width: 1; }
-  .m--2 { --width: 2; }
-  .m--3 { --width: 3; }
-  .m--4 { --width: 4; }
-  .m--5 { --width: 5; }
-  .m--6 { --width: 6; }
-  .m--7 { --width: 7; }
-  .m--full { --width: var(--columns); max-width: 100%; }
+  .gridlet__m--1 { --width: 1; }
+  .gridlet__m--2 { --width: 2; }
+  .gridlet__m--3 { --width: 3; }
+  .gridlet__m--4 { --width: 4; }
+  .gridlet__m--5 { --width: 5; }
+  .gridlet__m--6 { --width: 6; }
+  .gridlet__m--7 { --width: 7; }
+  .gridlet__m--full { --width: var(--columns); max-width: 100%; }
 }
 @media (min-width: 1400px ) {
-	.l--1 { --width: 1; }
-	.l--2 { --width: 2; }
-	.l--3 { --width: 3; }
-	.l--4 { --width: 4; }
-	.l--5 { --width: 5; }
-	.l--6 { --width: 6; }
-	.l--7 { --width: 7; }
-	.l--full { --width: var(--columns); max-width: 100%; }
+	.gridlet__l--1 { --width: 1; }
+	.gridlet__l--2 { --width: 2; }
+	.gridlet__l--3 { --width: 3; }
+	.gridlet__l--4 { --width: 4; }
+	.gridlet__l--5 { --width: 5; }
+	.gridlet__l--6 { --width: 6; }
+	.gridlet__l--7 { --width: 7; }
+	.gridlet__l--full { --width: var(--columns); max-width: 100%; }
 }
 
 
@@ -227,6 +227,9 @@ pre, code {
   code {
     padding: 0.125rem 0.5rem !important;
     margin-bottom: 0 !important;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
   }
     pre > code {
       background: none;
@@ -351,28 +354,17 @@ textarea,
 select {
   font-family: 'aktiv-grotesk', sans-serif;
   padding: calc(var(--gutter) * .05em) calc(var(--gutter) * .1em);
-  font-size: 1rem;
+  font-size: 1em;
   color: var(--primary);
   width: 100%;
   display: block;
-  border-radius: 0.125em;
   border: 2px solid var(--secondary);
   margin-bottom: 1em;
   margin-top: 0.25em;
 }
-  label.message {
+  label {
     width: 100%;
-    margin-right: 0;
-  }
-  @media (min-width: 50em) {
-    label {
-      width: 49%;
-      display: inline-block;
-      vertical-align: top;
-    }
-    label:nth-child(even) {
-      margin-right: 1.35%;
-    }
+    display: block;
   }
 input:focus,
 textarea:focus,
@@ -384,7 +376,6 @@ button, input[type=submit] {
   background: var(--primary) !important;
   color: var(--secondary) !important;
   border: none;
-  border-radius: 0.125em;
   display: inline !important;
   padding: 0.25em 0.75em;
 }
