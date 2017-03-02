@@ -350,7 +350,7 @@ input,
 textarea,
 select {
   font-family: 'aktiv-grotesk', sans-serif;
-  padding: 1rem;
+  padding: calc(var(--gutter) * .05em) calc(var(--gutter) * .1em);
   font-size: 1rem;
   color: var(--primary);
   width: 100%;
@@ -359,8 +359,6 @@ select {
   border: 2px solid var(--secondary);
   margin-bottom: 1em;
   margin-top: 0.25em;
-
-  transition: border 0.1s ease-in-out;
 }
   label.message {
     width: 100%;
