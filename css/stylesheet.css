@@ -127,7 +127,7 @@ main {
       padding-right: calc(var(--gutter) * 1em);
     }
   }
-.row{
+.row {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;

@@ -35,13 +35,26 @@
       border: none;
       background-color: var(--bg);
     }
+
+      @media (min-width: 900px ) {
+        .container {
+          padding-left: calc(var(--gutter) * 0.25em);
+          padding-right: calc(var(--gutter) * 0.25em);
+        }
+      }
+      @media (min-width: 1400px ) {
+        .container {
+          padding-left: calc(var(--gutter) * 0.5em);
+          padding-right: calc(var(--gutter) * 0.5em);
+        }
+      }
   </style>
 </head>
 
 <body>
 
 <div class="cover parallax lazy with-grain" data-src="img/deimos/DEIMOS-BG.jpg">
-  <header class="row">
+  <header class="row container">
     <div class="gridlet__s--full gridlet__m--full">
       <h1>PIF&ndash;813 DEIMOS</h1>
       <h6>SALES &amp; INFORMATION GUIDE</h6>
