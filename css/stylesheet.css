@@ -345,6 +345,58 @@ table {
 
 
 
+/* FORMS */
+input,
+textarea,
+select {
+  font-family: 'aktiv-grotesk', sans-serif;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--primary);
+  width: 100%;
+  display: block;
+  border-radius: 0.125em;
+  border: 2px solid var(--secondary);
+  margin-bottom: 1em;
+  margin-top: 0.25em;
+
+  transition: border 0.1s ease-in-out;
+}
+  label.message {
+    width: 100%;
+    margin-right: 0;
+  }
+  @media (min-width: 50em) {
+    label {
+      width: 49%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    label:nth-child(even) {
+      margin-right: 1.35%;
+    }
+  }
+input:focus,
+textarea:focus,
+select:focus {
+  border: 2px solid var(--primary);
+  outline: none;
+}
+button, input[type=submit] {
+  background: var(--primary) !important;
+  color: var(--secondary) !important;
+  border: none;
+  border-radius: 0.125em;
+  display: inline !important;
+  padding: 0.25em 0.75em;
+}
+  button, input[type=submit]:hover {
+    background: var(--secondary);
+    cursor: pointer;
+  }
+
+
+
 /* MAIN SHIT */
 body{
   font-family: 'aktiv-grotesk', sans-serif;

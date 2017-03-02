@@ -181,6 +181,63 @@
       <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
     </div>
   </section>
+
+  <section class="row container">
+    <div class="s--full m--full">
+      <h1>FORMS</h1>
+      <hr>
+    </div>
+    <div class="s--full">
+      <form method="post" action="<?php echo $baseurl;?>php/processor.php" id="contact" accept-charset="utf-8" enctype="multipart/form-data">
+        <fieldset>
+          <div id="contact-message"></div>
+
+        <!-- CUSTOMER FIRST NAME -->
+        <label for="firstname">
+          <strong>First Name</strong>
+          <input type="text" id="firstname" name="firstname" autocomplete="off" maxlength="30" placeholder="First Name">
+        </label>
+
+        <!-- CUSTOMER LAST NAME -->
+        <label for="lastname">
+          <strong>Last Name</strong>
+          <input type="text" id="lastname" name="lastname" autocomplete="off" maxlength="30" placeholder="Last Name">
+        </label>
+
+        <!-- CUSTOMER EMAIL -->
+        <label for="email">
+          <strong>Email Address</strong>
+          <input type="email" id="email" name="email" autocomplete="off" maxlength="70" placeholder="Email Address">
+        </label>
+
+        <!-- DEPARTMENT LISTING -->
+        <?php if($merchantsupport == true && $supportselect == true){ ?>
+          <label for="support">
+            <strong>Select a department...</strong>
+            <select id="support" name="support[]" data-rule-required="<?php echo $supportfield;?>" data-msg-required="<?php echo $lang['form-required-support'];?>" class="select">
+              <option value="">General Info</option>
+              <option value="<?php echo $lang['form-support-2'];?>">Office Supplies</option>
+              <option value="<?php echo $lang['form-support-3'];?>">Furniture</option>
+              <option value="<?php echo $lang['form-support-4'];?>">Promotional Products</option>
+              <option value="<?php echo $lang['form-support-5'];?>">Design &amp; Printing</option>
+            </select>
+          </label>
+        <?php } ?>
+
+        <!-- CUSTOMER MESSAGE -->
+        <label for="message" class="message">
+          <strong>Your Message</strong>
+          <textarea rows="10" id="message" name="message" maxlength="1000" placeholder="Type your message here..."></textarea>
+        </label>
+
+        <!-- FORM ACTION BUTTONS -->
+        <button type="submit" id="contact-button">SUBMIT</button>
+        <button type="reset" id="reset-button">RESET</button>
+
+        </fieldset>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer class="row container">
