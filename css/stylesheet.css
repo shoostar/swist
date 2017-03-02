@@ -339,7 +339,7 @@ table {
     color: var(--primary);
   }
     tr {
-      border-bottom: 1px dotted var(--secondary);
+      border-bottom: 1px dotted var(--primary);
     }
   th, td {
     padding: 0.8rem 0 0;

@@ -19,6 +19,22 @@
     .lazy-loaded {
       opacity: 1 !important;
     }
+    :root{
+      --primary: rgb(171, 18, 17);
+      --secondary: rgb(3, 7, 6);
+      --bg: rgb(10, 22, 22);
+    }
+    header *, footer * {
+      color: var(--primary);
+    }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--primary);
+    }
+    ::-webkit-scrollbar-track {
+      border: none;
+      background-color: var(--bg);
+    }
   </style>
 </head>
 
@@ -26,7 +42,7 @@
 
 <div class="cover parallax lazy with-grain" data-src="img/deimos/DEIMOS-BG.jpg">
   <header class="row">
-    <div class="gridlet__s--full m--full">
+    <div class="gridlet__s--full gridlet__m--full">
       <h1>PIF&ndash;813 DEIMOS</h1>
       <h6>SALES &amp; INFORMATION GUIDE</h6>
     </div>
@@ -35,25 +51,12 @@
 
 <main>
   <a class="skip-main" href="#main" tabindex="-1">Skip to main content</a>
-  <header class="row">
-    <div class="gridlet__s--full m--5 l--6">
-      <div class="progressbar">
-        <div class="progress" data-percentage="97"></div>
-      </div>
-    </div>
-    <div class="gridlet__s--full m--3 l--2">
-      <h3 class="progress-count text-right"></h3>
-    </div>
-  </header>
   <section class="row container">
-    <div class="gridlet__s--full m--full">
+    <div class="gridlet__s--full">
       <h1>OVERVIEW</h1>
       <hr>
     </div>
-  </section>
-
-	<section class="row container">
-		<div class="gridlet__s--full m--full l--4">
+		<div class="gridlet__s--full gridlet__m--full gridlet__l--4">
       <h5>BROADSIDE DOMINATION</h5>
 			<p>Ship number 813 <em>'Deimos'</em> is a Watcher-class battlecarrier capable of orbital subjugation. Built for Pyrrhus' Imperial Fleet in 2216, <em>'Deimos'</em> first cut her teeth in victorious battle at the Fall of Masperon.</p>
       <p>The most prominent feature of <em>'Deimos''</em> hull is its asymmetrical broadside design. Flanking the battlefield with its massive starboard shear, the 36 plasma cannons, 4 rocket pods, and a whopping 18 160mm artillery turrets absolutely shred anything in their firing line. While certainly not the most nimble of ships, the widened firing arc allows <em>'Deimos'</em> to stay her course without having to correct its pitch or roll to compensate for poor firing position.</p>
@@ -100,7 +103,7 @@
       <h5>WORK ORDERS</h5>
       <p>Throughout the ship, more defense positions are being devised. To the forward area of the main War Command Center, a highly-armored security room is being added, which will contain the ship's security control center, as well as an armory for security and away-team personnel. To deter intruders and prevent quick defeats in combat, <em>'Deimos'</em> has had its core strategically placed behind very thick walls of armor in a highly obscure yet still accessible section of the keel.</p>
 		</div>
-    <figure class="gridlet__s--full m--full l--4">
+    <figure class="gridlet__s--full gridlet__m--full gridlet__l--4">
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-11.jpg" />
@@ -392,14 +395,11 @@
 	</section>
 
   <section class="row container">
-    <div class="gridlet__s--full m--full">
+    <div class="gridlet__s--full">
       <h1>IMAGES</h1>
       <hr>
     </div>
-  </section>
-
-  <section class="row container">
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-3.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-3.jpg" />
@@ -408,7 +408,7 @@
         <small>Looking forward from the rear entrance to the multi-tiered main bridge (behind Captain's perch)</small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-22.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-3.jpg" />
@@ -417,7 +417,7 @@
         <small><em>'Deimos'</em> firing on its prey</small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-12.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-12.jpg" />
@@ -426,7 +426,7 @@
         <small>A peek at the port side of <em>'Deimos'</em></small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-18.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-18.jpg" />
@@ -435,7 +435,7 @@
         <small>1 of the 20 general crew quarters aboard the ship</small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-5.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-5.jpg" />
@@ -444,7 +444,7 @@
         <small>One of the 7 escape pods docked to <em>'Deimos'</em></small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-7.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-7.jpg" />
@@ -453,7 +453,7 @@
         <small>Hangar construction, USEF Shipyard</small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-8.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-8.jpg" />
@@ -462,7 +462,7 @@
         <small>View from the battle bridge</small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-10.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-10.jpg" />
@@ -471,7 +471,7 @@
         <small><em>'Deimos'</em> ready to depart for trials</small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-4.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-4.jpg" />
@@ -480,7 +480,7 @@
         <small>Primary generators, aft engineering</small>
       </figcaption>
     </figure>
-    <figure class="gridlet__s--full m--full">
+    <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-21.jpg" />
         <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-21.jpg" />
