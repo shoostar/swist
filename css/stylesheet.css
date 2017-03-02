@@ -353,7 +353,7 @@ input,
 textarea,
 select {
   font-family: 'aktiv-grotesk', sans-serif;
-  padding: calc(var(--gutter) * .05em) calc(var(--gutter) * .1em);
+  padding: calc(var(--gutter) * .0375em) calc(var(--gutter) * .075em);
   font-size: 1em;
   color: var(--primary);
   width: 100%;
