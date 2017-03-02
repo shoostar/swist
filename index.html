@@ -25,7 +25,7 @@
 
 <div class="cover parallax lazy with-grain" data-src="https://unsplash.it/g/2000/3000/?image=0">
   <header class="row container">
-    <div class="m--full">
+    <div class="s--full m--full">
       <h1>SWIST+</h1>
       <h6>A SIMPLE WEB FRAMEWORK</h6>
     </div>
@@ -35,16 +35,16 @@
 <main>
   <a class="skip-main" href="#main" tabindex="-1">Skip to main content</a>
   <section class="row container">
-    <div class="m--full">
+    <div class="s--full m--full">
       <h1>OVERVIEW</h1>
       <hr>
     </div>
-		<div class="m--full l--4">
+		<div class="s--full m--full l--4">
       <h5>Mathematically Simple</h5>
 			<p>Everything in SWIST+ is calculated on the fly, from colors, width, and font sizes, to gutters, columns, margins and padding. Now that CSS3 allows for the use of variables without a preprocessor, we can explicitly set variables, and then use them wherever we please using the <code>calc();</code> function so that we can simply perform the math at run-time.</p>
       <p>The codebase is rather fat right now, but I'm working on chunking it down as much as possible, while still retaining some useful features (like the touch-enabled slider). The size of the index.html file will more than likely grow as I add new examples, but I'm going to do my best to trim back the rest. I am also going to include some other shit, like form inputs and generic article/media layouts.</p>
 		</div>
-    <div class="m--full l--4">
+    <div class="s--full m--full l--4">
       <figure>
         <picture class="with-grain">
           <source data-srcset="https://unsplash.it/g/2000/3000/?image=1042" />
@@ -60,19 +60,15 @@
           <tbody>
             <tr>
               <td>index.html</td>
-              <td class="text-right">8.5kb / +219</td>
+              <td class="text-right">9.19kb / +219</td>
             </tr>
             <tr>
               <td>stylesheet.css*</td>
-              <td class="text-right">11.2kb / +526</td>
-            </tr>
-            <tr>
-              <td>slick.css</td>
-              <td class="text-right">3.7kb / +198</td>
+              <td class="text-right">12.2kb / +526</td>
             </tr>
             <tr>
               <td>index.js**</td>
-              <td class="text-right">1.5kb / +76</td>
+              <td class="text-right">1.33kb / +76</td>
             </tr>
             <tr>
               <td>modernizr-custom.min.js</td>
@@ -89,11 +85,71 @@
 	</section>
 
   <section class="row container">
-    <div class="m--full">
+    <div class="s--full m--full">
+      <h1>GRID</h1>
+      <hr>
+    </div>
+    <div class="s--full m--full l--4">
+      <h5>Headache-free grids</h5>
+      <p>SWIST+ is setup in such a way that the end-user (you) shouldn't have to solve any complicated math equations for sorting out gridlet widths, gutters, padding, or other sizing adjustments. SWIST+ is based on the premise that device width and pixel densities are infinite, but one thing that remains consistent across an individual website is how the grid columns are setup.</p>
+      <p>Rather trying to figure out the widths and gutters for (admittedly an oddball) 11-column layout, why not express this as <code>columns: 11;</code>, and then for each column, simply assign a width that defines how many columns it spans? Well, now you can. All you need to do is pass the <code>--width:</code> variable along to that gridlet, and the rest is done by your browser.</p>
+    </div>
+  </section>
+
+  <section class="row container">
+    <div class="s--full m--1 demo">
+      <p>1</p>
+    </div>
+    <div class="s--full m--1 demo">
+      <p>2</p>
+    </div>
+    <div class="s--full m--1 demo">
+      <p>3</p>
+    </div>
+    <div class="s--full m--1 demo">
+      <p>4</p>
+    </div>
+    <div class="s--full m--1 demo">
+      <p>5</p>
+    </div>
+    <div class="s--full m--1 demo">
+      <p>6</p>
+    </div>
+    <div class="s--full m--1 demo">
+      <p>7</p>
+    </div>
+    <div class="s--full m--1 demo">
+      <p>8</p>
+    </div>
+    <div class="s--full m--2 demo">
+      <p>1</p>
+    </div>
+    <div class="s--full m--2 demo">
+      <p>2</p>
+    </div>
+    <div class="s--full m--2 demo">
+      <p>3</p>
+    </div>
+    <div class="s--full m--2 demo">
+      <p>4</p>
+    </div>
+    <div class="s--full m--4 demo">
+      <p>1</p>
+    </div>
+    <div class="s--full m--4 demo">
+      <p>2</p>
+    </div>
+    <div class="s--full m--full demo">
+      <p>1</p>
+    </div>
+  </section>
+
+  <section class="row container">
+    <div class="s--full m--full">
       <h1>TYPOGRAPHY</h1>
       <hr>
     </div>
-    <div class="m--full l--4">
+    <div class="s--full m--full l--4">
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
@@ -101,7 +157,7 @@
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
     </div>
-    <div class="m--full l--4">
+    <div class="s--full m--full l--4">
       <p><a href="#">This is a regular link</a></p>
       <p><strong>Strong is used to indicate strong importance</strong></p>
       <p><em>This text has added emphasis</em></p>
@@ -128,17 +184,17 @@
 </main>
 
 <footer class="row container">
-  <div class="m--full l--4">
+  <div class="s--full m--full l--4">
     <h5>Thanks for looking :)</h5>
   </div>
-  <div class="m--full l--4">
+  <div class="s--full m--full l--4">
     <p>There shouldn't be any major issues or incompatibilities with this little 'framework', but if you do run across any issues, please post them in the Github repository.</p>
     <hr>
     <p><a href="mailto:hi@jrs86.com?subject=hello">Email</a> &mdash;
       <a href="https://linkedin.com/in/jonschuster" target="_blank" rel="noopener noreferrer">LinkedIn</a> &mdash;
       <a href="https://twitter.com/jon_schuster" target="_blank" rel="noopener noreferrer">Twitter</a>
     </p>
-    <p><small class="lightenup">Oh, and by the way: copyright <strong><u>ME</u></strong>, mfkr. Don't steal.</small></p>
+    <p><small class="lightenup">Oh, and by the way: copyright <strong>JRS<sup>86</sup></strong>. Don't steal.</small></p>
   </div>
 </footer>
 

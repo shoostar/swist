@@ -107,6 +107,8 @@ main {
   width: 100%;
   margin: 0 auto;
   padding: 0 0 calc(var(--gutter) * .3em);
+  position: relative;
+  z-index: 3;
 }
 .container {
   width: 100%;
@@ -133,8 +135,8 @@ main {
 
 
 
-/* ORIGINAL GRIDLET CLASS */
-[class*="m--"] {
+/* GRIDLET CLASS */
+[class*="s--"] {
 	padding-right: calc(var(--gutter) * .1em);
 	padding-left: calc(var(--gutter) * .1em);
 	flex-basis: calc((100% / var(--columns)) * var(--width));
@@ -142,39 +144,7 @@ main {
 
 
 
-/* UPDATED GRIDLET CLASS */ /*
-[class*="m--"] {
-	padding-right: calc(var(--gutter) * .1em);
-	padding-left: calc(var(--gutter) * .1em);
-	flex-basis: calc((100% / var(--columns)) * var(--width));
-}
-UNCOMMENT TO USE, BUT DELETE THE ORIGINAL GRIDLET CLASS! */
-
-
-
-/* ORIGINAL GRID SIZING */
-.m--1 { --width: 1; }
-.m--2 { --width: 2; }
-.m--3 { --width: 3; }
-.m--4 { --width: 4; }
-.m--5 { --width: 5; }
-.m--6 { --width: 6; }
-.m--7 { --width: 7; }
-.m--full { --width: var(--columns); max-width: 100%; }
-@media (min-width: 900px ) {
-	.l--1 { --width: 1; }
-	.l--2 { --width: 2; }
-	.l--3 { --width: 3; }
-	.l--4 { --width: 4; }
-	.l--5 { --width: 5; }
-	.l--6 { --width: 6; }
-	.l--7 { --width: 7; }
-	.l--full { --width: var(--columns); max-width: 100%; }
-}
-
-
-
-/* UPDATED GRID SIZING */ /*
+/* GRID SIZING */
 .s--1 { --width: 1; }
 .s--2 { --width: 2; }
 .s--3 { --width: 3; }
@@ -203,7 +173,6 @@ UNCOMMENT TO USE, BUT DELETE THE ORIGINAL GRIDLET CLASS! */
 	.l--7 { --width: 7; }
 	.l--full { --width: var(--columns); max-width: 100%; }
 }
-UNCOMMENT TO USE, BUT DELETE THE ORIGINAL GRID SIZING! */
 
 
 
@@ -426,7 +395,7 @@ a.skip-main:focus, a.skip-main:active {
   color: var(--primary);
 	position: absolute;
 	top: 0;
-	z-index: -1;
+	z-index: 0;
   width: 100%;
   height: 40em;
 	display: flex;
@@ -581,3 +550,39 @@ figure {
 .bottomless { margin-bottom: 0 !important; }
 .text-center { text-align: center !important; }
 .text-right { text-align: right !important; }
+
+
+
+/* DEMO STYLES FOR GRIDLET PIECES */
+.demo {
+	display: block;
+	padding-top: 1em;
+	background-color: var(--secondary);
+  color: var(--bg);
+  text-align: center;
+	border: 1px solid var(--bg);
+}
+
+
+
+/* FOOTER REVEAL STUFFS */
+/*.is-fixed {
+  position: fixed;
+}
+
+.wrap {
+  position: relative;
+  z-index: 2;
+}
+.site-footer {
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.site-footer__content {
+  margin: 0 auto;
+}
+.site-footer__content h3 {
+  margin-bottom: .5em;
+}*/
