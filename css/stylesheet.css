@@ -616,9 +616,10 @@ figure {
 
 
 .content {
+  background: var(--bg);
   z-index: 2;
   position: relative;
-  padding: calc(var(--gutter) * .3em) 0;
+  padding-bottom: calc(var(--gutter) * .6em);
 }
 footer {
   width: 100%;
