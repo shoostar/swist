@@ -11,18 +11,21 @@
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script src="js/modernizr-custom.min.js"></script>
   <style>
-    .lazy {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
+    .b-lazy {
+      -webkit-transition: opacity 500ms ease-in-out;
+         -moz-transition: opacity 500ms ease-in-out;
+           -o-transition: opacity 500ms ease-in-out;
+              transition: opacity 500ms ease-in-out;
       max-width: 100%;
+      opacity: 0;
     }
-    .lazy-loaded {
-      opacity: 1 !important;
+    .b-lazy.b-loaded {
+      opacity: 1;
     }
     :root{
       --primary: rgb(171, 18, 17);
-      --secondary: rgb(3, 7, 6);
-      --bg: rgb(10, 22, 22);
+      --secondary: rgb(10, 22, 22);
+      --bg: rgb(3, 7, 6);
     }
     header *, footer * {
       color: var(--primary);
@@ -53,7 +56,7 @@
 
 <body>
 
-<div class="cover parallax lazy with-grain" data-src="img/deimos/DEIMOS-BG.jpg">
+<div class="cover parallax b-lazy with-grain" data-src="img/deimos/DEIMOS-BG.jpg">
   <header class="row container">
     <div class="gridlet__s--full gridlet__m--full">
       <h1>PIF&ndash;813 DEIMOS</h1>
@@ -79,7 +82,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-19.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-19.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-19.jpg" />
         </picture>
         <figcaption>
           <small>A look across the hangar at both fighter/bomber wings</small>
@@ -91,7 +94,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-23.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-18.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-18.jpg" />
         </picture>
         <figcaption>
           <small><em>'Deimos''</em> anti-navy armor reaches 8m thick in some areas</small>
@@ -104,7 +107,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-17.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-17.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-17.jpg" />
         </picture>
         <figcaption>
           <small>A rare glimpse into the Captain's quarters</small>
@@ -120,7 +123,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-11.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-11.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-11.jpg" />
         </picture>
         <figcaption>
           <small>A menacing glance at an oncoming <em>'Deimos'</em></small>
@@ -171,7 +174,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-1.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-1.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-1.jpg" />
         </picture>
         <figcaption>
           <small><em>'Deimos'</em> just outside her home port, Aestus orbit (undergoing bridge construction)</small>
@@ -237,7 +240,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-13.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-13.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-13.jpg" />
         </picture>
         <figcaption>
           <small>The business side of <em>'Deimos'</em></small>
@@ -276,7 +279,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-15.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-15.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-15.jpg" />
         </picture>
         <figcaption>
           <small>Advanced constructors, cargo hold #2</small>
@@ -331,7 +334,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-16.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-16.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-16.jpg" />
         </picture>
         <figcaption>
           <small>Primary warp core reactor room</small>
@@ -370,7 +373,7 @@
       <figure>
         <picture class="with-grain">
           <source data-srcset="img/deimos/DEIMOS-14.jpg" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-14.jpg" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-14.jpg" />
         </picture>
         <figcaption>
           <small><a href="http://steamcommunity.com/sharedfiles/filedetails/?id=769431895" targer="_blank">FBW1</a> and <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=774925480" targer="_blank">OL 03 Harlequin</a>, the preferred fighter/bomber combination</small>
@@ -415,7 +418,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-3.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-3.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-3.jpg" />
       </picture>
       <figcaption>
         <small>Looking forward from the rear entrance to the multi-tiered main bridge (behind Captain's perch)</small>
@@ -424,7 +427,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-22.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-3.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-3.jpg" />
       </picture>
       <figcaption>
         <small><em>'Deimos'</em> firing on its prey</small>
@@ -433,7 +436,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-12.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-12.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-12.jpg" />
       </picture>
       <figcaption>
         <small>A peek at the port side of <em>'Deimos'</em></small>
@@ -442,7 +445,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-18.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-18.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-18.jpg" />
       </picture>
       <figcaption>
         <small>1 of the 20 general crew quarters aboard the ship</small>
@@ -451,7 +454,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-5.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-5.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-5.jpg" />
       </picture>
       <figcaption>
         <small>One of the 7 escape pods docked to <em>'Deimos'</em></small>
@@ -460,7 +463,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-7.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-7.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-7.jpg" />
       </picture>
       <figcaption>
         <small>Hangar construction, USEF Shipyard</small>
@@ -469,7 +472,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-8.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-8.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-8.jpg" />
       </picture>
       <figcaption>
         <small>View from the battle bridge</small>
@@ -478,7 +481,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-10.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-10.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-10.jpg" />
       </picture>
       <figcaption>
         <small><em>'Deimos'</em> ready to depart for trials</small>
@@ -487,7 +490,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-4.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-4.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-4.jpg" />
       </picture>
       <figcaption>
         <small>Primary generators, aft engineering</small>
@@ -496,7 +499,7 @@
     <figure class="gridlet__s--full">
       <picture class="with-grain">
         <source data-srcset="img/deimos/DEIMOS-21.jpg" />
-        <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-21.jpg" />
+        <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/deimos/DEIMOS-21.jpg" />
       </picture>
       <figcaption>
         <small>The most deadly, fearsome, tireless Harbinger of War that Empyrion Galaxy has ever witnessed</small>
@@ -506,6 +509,13 @@
 </main>
 
 <script src="//code.jquery.com/jquery-2.2.4.min.js" defer></script>
+<script src="js/blazy.min.js"></script>
+<script>
+  ;(function() {
+    // Initialize
+    var bLazy = new Blazy();
+  })();
+</script>
 <script>
   function downloadJSAtOnload() {
     var element = document.createElement("script");

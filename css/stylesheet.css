@@ -115,6 +115,12 @@ main {
   margin: 0 calc(var(--gutter) * .15em);
   padding: calc(var(--gutter) * .3em) 0 0;
 }
+.container-alt {
+  width: 100%;
+  margin: 0;
+  padding: calc(var(--gutter) * .3em) 0 0;
+  --columns: 9;
+}
   @media (min-width: 900px ) {
     .container {
       padding-left: calc(var(--gutter) * 0.5em);
@@ -214,7 +220,6 @@ pre, code {
   font-family: "inconsolata", monospace;
   background: var(--primary);
   color: var(--bg);
-  border-radius: 0.125rem;
   overflow-wrap: break-word !important;
   word-wrap: break-word !important;
 }
@@ -225,7 +230,7 @@ pre, code {
     text-align: left;
   }
   code {
-    padding: 0.125rem 0.5rem !important;
+    padding: 0.1rem 0.5rem 0.15rem !important;
     margin-bottom: 0 !important;
     white-space: pre;
     word-break: normal;
@@ -236,7 +241,7 @@ pre, code {
     }
 em { font-style: italic; }
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 figcaption {
   line-height: calc(1.5 * .6) !important;
@@ -257,7 +262,7 @@ a:link, a:visited {
 	color: var(--primary);
   transition: all ease-in-out 0.15s !important;
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: 600;
 }
   footer a:link, footer a:visited {
     color: var(--secondary);
@@ -339,7 +344,7 @@ table {
     color: var(--primary);
   }
     tr {
-      border-bottom: 1px dotted var(--primary);
+      border-bottom: 1px dotted var(--secondary);
     }
   th, td {
     padding: 0.8rem 0 0;
@@ -352,7 +357,7 @@ table {
 input,
 textarea,
 select {
-  font-family: 'aktiv-grotesk', sans-serif;
+  font-family: 'acumin-pro', sans-serif;
   padding: calc(var(--gutter) * .0375em) calc(var(--gutter) * .075em);
   font-size: 1em;
   color: var(--primary);
@@ -388,7 +393,7 @@ button, input[type=submit] {
 
 /* MAIN SHIT */
 body{
-  font-family: 'aktiv-grotesk', sans-serif;
+  font-family: 'acumin-pro', sans-serif;
 	background-color: var(--bg);
   color: var(--primary);
 }
@@ -456,7 +461,6 @@ picture {
 	padding-bottom: 62.5%;
 	position: relative;
 	width: 100%;
-  display: block;
 }
   picture img {
   	object-fit: cover !important;
@@ -597,7 +601,7 @@ figure {
 /* DEMO STYLES FOR GRIDLET PIECES */
 .demo {
 	display: block;
-	padding-top: 1em;
+	padding-top: 0.75em;
 	background-color: var(--secondary);
   color: var(--bg);
   text-align: center;

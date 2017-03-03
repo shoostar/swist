@@ -5,26 +5,6 @@ $('p').each(function() {
 
 
 
-// Lazy load backgrounds
-function lazyLoadBg(el, imageSource) {
-  $('<img/>').attr('src', imageSource).on({
-    load: function() {
-      $(this).remove();
-      $(el).css('backgroundImage', 'url(' + imageSource + ')');
-      $(el).css('opacity', '1');
-    },
-    error: function() {
-      $(this).remove();
-    }
-  });
-}
-
-$('.lazy').each(function(index, el) {
-  lazyLoadBg(el, $(el).data('src'));
-});
-
-
-
 // Simple parallax background
 var cover = document.querySelector('.parallax'),
   coverHeight = Math.round(cover.offsetHeight),

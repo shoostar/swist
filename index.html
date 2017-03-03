@@ -11,21 +11,25 @@
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script src="js/modernizr-custom.min.js"></script>
   <style>
-    .lazy {
+    .b-lazy {
+      -webkit-transition: opacity 500ms ease-in-out;
+         -moz-transition: opacity 500ms ease-in-out;
+           -o-transition: opacity 500ms ease-in-out;
+              transition: opacity 500ms ease-in-out;
+      max-width: 100%;
       opacity: 0;
-      transition: opacity 0.5s ease-in-out;
     }
-    .lazy-loaded {
-      opacity: 1 !important;
+    .b-lazy.b-loaded {
+      opacity: 1;
     }
   </style>
 </head>
 
 <body>
 
-<div class="cover parallax lazy with-grain" data-src="https://unsplash.it/g/2000/3000/?image=0">
+<div class="cover parallax b-lazy with-grain" data-src="https://unsplash.it/g/2000/3000/?image=0">
   <header class="row container">
-    <div class="gridlet__s--full gridlet__m--full">
+    <div class="gridlet__s--full">
       <h1>SWIST+</h1>
       <h6>A SIMPLE WEB FRAMEWORK</h6>
     </div>
@@ -35,20 +39,22 @@
 <main>
   <a class="skip-main" href="#main" tabindex="-1">Skip to main content</a>
   <section class="row container">
-    <div class="gridlet__s--full gridlet__m--full">
+    <div class="gridlet__s--full">
       <h1>OVERVIEW</h1>
       <hr>
     </div>
-		<div class="gridlet__s--full gridlet__m--full gridlet__l--4">
+		<div class="gridlet__s--full gridlet__l--4">
       <h5>Mathematically Simple</h5>
-			<p>Everything in SWIST+ is calculated on the fly, from colors, width, and font sizes, to gutters, columns, margins and padding. Now that CSS3 allows for the use of variables without a preprocessor, we can explicitly set variables, and then use them wherever we please using the <code>calc();</code> function so that we can simply perform the math at run-time.</p>
-      <p>The codebase is rather fat right now, but I'm working on chunking it down as much as possible, while still retaining some useful features (like the touch-enabled slider). The size of the index.html file will more than likely grow as I add new examples, but I'm going to do my best to trim back the rest. I am also going to include some other shit, like form inputs and generic article/media layouts.</p>
+			<p>Everything in SWIST+ is calculated on the fly, from colors, width, and font sizes, to gutters, columns, margins and padding. Now that CSS3 allows for the use of variables without a preprocessor, we can explicitly set variables, and then use them wherever we please, just like using the <code>calc();</code> function, so that we can simply have the browser perform the math at run-time.</p>
+      <p>The codebase is a bit fat right now, but I'm working on chunking it down as much as possible. The size of the index.html file will more than likely grow as I add new examples, but I'm going to do my best to trim back the rest. I am also going to include some other shit, like form inputs and generic article/media layouts.</p>
+      <h5>Universal*</h5>
+			<p>While SWIST+ may not work on older browsers (honestly though, what does nowadays? And who really cares?), it should be perfectly compatible with all the latest and greatest browsers, regardless of the device. <small class="lightenup"><em>&mdash; *almost</small></em></p>
 		</div>
-    <div class="gridlet__s--full gridlet__m--full gridlet__l--4">
+    <div class="gridlet__s--full gridlet__l--4">
       <figure>
         <picture class="with-grain">
           <source data-srcset="https://unsplash.it/g/2000/3000/?image=1042" />
-          <img class="lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="https://unsplash.it/g/2000/3000/?image=1042" />
+          <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="https://unsplash.it/g/2000/3000/?image=1042" />
         </picture>
         <figcaption>
           <small>This image is responsive, has GSAP noise protection, and is also lazy-loaded.</small>
@@ -85,7 +91,7 @@
 	</section>
 
   <section class="row container">
-    <div class="gridlet__s--full gridlet__m--full">
+    <div class="gridlet__s--full">
       <h1>GRID</h1>
       <hr>
     </div>
@@ -94,14 +100,14 @@
       <p>SWIST+ is setup in a way that there are no complicated math equations for sorting out gridlet widths, gutters, padding, or other sizing adjustments. Rather, it's based on the premise that device widths and pixel densities that your audience views your site on are unknown.</p>
       <p>To simplify a 12-column layout, this can be expressed as <code>--columns: 12;</code>, and then for each grid item (gridlet), simply assign a width that defines how many columns it spans. Pass a <code>--width:</code> variable along to that gridlet, and the rest is done by your browser. Setting <code>--width: 3;</code> means that gridlet spans 3 columns out of the 12 available (as defined by <code>--columns: 12;</code>).</p>
       <h5>Agnostic</h5>
-      <p>With CSS' latest spec being pushed widely across all modern web rendering engines, we can now use native CSS variables on just about any device, and not break the internet.</p>
+      <p>With CSS' latest spec being pushed widely across all modern web rendering engines, we can now use native CSS variables on just about any device, and not break the internet. However, it's still highly recommended that you refactor the CSS and place it on top of a preprocessor to make things a bit easier, and to add other functions.</p>
     </div>
     <div class="gridlet__s--full gridlet__m--4 gridlet__l--4">
       <h5>Responsive</h5>
       <p>Currently, SWIST+ has only 3 breakpoints on top of its default scale, but it's easy to add in your own. You need only to define how many columns a gridlet is to span, rather than having to calculate individual measurements for every container and breakpoint. Gridlets can be adjusted per-breakpoint by appending <code>gridlet__(size)--#</code> to that gridlet (or whatever naming convention you choose).</p>
       <p>With the exception of your own CSS, everything should stack and un-stack cleanly, regardless of the breakpoint, gridlet size, or nesting. You only need to set at least one gridlet size, regardless of desired breakpoint.</p>
       <h5>Highly configurable</h5>
-      <p>The following example is based on 8-columns, and while it wouldn't make sense to use so many oddball breakpoints for every single gridlet, but it just goes to show you how simple yet versatile this grid system can be.</p>
+      <p>The first of the following examples is based on 8-columns, and while it wouldn't make sense to use so many oddball breakpoints for every single gridlet, but it just goes to show you how simple yet versatile this grid system can be. The second layout simply shows how you can not only extend the grid's container to the full-width of the screen, but adjust the column count on the fly as well.</p>
     </div>
   </section>
 
@@ -153,8 +159,20 @@
     </div>
   </section>
 
+  <section class="row container-alt">
+    <div class="gridlet__s--3 demo">
+      <p>1</p>
+    </div>
+    <div class="gridlet__s--3 demo">
+      <p>2</p>
+    </div>
+    <div class="gridlet__s--3 demo">
+      <p>3</p>
+    </div>
+  </section>
+
   <section class="row container">
-    <div class="gridlet__s--full gridlet__m--full">
+    <div class="gridlet__s--full">
       <h1>TYPOGRAPHY</h1>
       <hr>
       <h5>Solid typeplate</h5>
@@ -164,7 +182,7 @@
   </section>
 
   <section class="row container">
-    <div class="gridlet__s--full gridlet__m--full gridlet__l--4">
+    <div class="gridlet__s--full gridlet__l--4">
       <h1>H1</h1>
       <h2>H2</h2>
       <h3>H3</h3>
@@ -172,7 +190,7 @@
       <h5>H5</h5>
       <h6>H6</h6>
     </div>
-    <div class="gridlet__s--full gridlet__m--full gridlet__l--4">
+    <div class="gridlet__s--full gridlet__l--4">
       <p><a href="#">This is a regular link</a></p>
       <p><strong>Strong is used to indicate strong importance</strong></p>
       <p><em>This text has added emphasis</em></p>
@@ -198,7 +216,7 @@
   </section>
 
   <section class="row container">
-    <div class="gridlet__s--full gridlet__m--full">
+    <div class="gridlet__s--full">
       <h1>FORMS</h1>
       <hr>
       <h5>Under construction</h5>
@@ -257,7 +275,7 @@
   </section>
 
   <section class="row container">
-    <div class="gridlet__s--full gridlet__m--full">
+    <div class="gridlet__s--full">
       <h1>UTILITIES</h1>
       <hr>
       <h5>Under construction</h5>
@@ -268,21 +286,28 @@
 </main>
 
 <footer class="row container">
-  <div class="gridlet__s--full gridlet__m--full gridlet__l--4">
+  <div class="gridlet__s--full gridlet__l--4">
     <h5>Thanks for looking :)</h5>
   </div>
-  <div class="gridlet__s--full gridlet__m--full gridlet__l--4">
+  <div class="gridlet__s--full gridlet__l--4">
     <p>There shouldn't be any major issues or incompatibilities with this little 'framework', but if you do run across any issues, please post them in the Github repository.</p>
     <hr>
     <p><a href="mailto:hi@jrs86.com?subject=hello">Email</a> &mdash;
       <a href="https://linkedin.com/in/jonschuster" target="_blank" rel="noopener noreferrer">LinkedIn</a> &mdash;
       <a href="https://twitter.com/jon_schuster" target="_blank" rel="noopener noreferrer">Twitter</a>
     </p>
-    <p><small class="lightenup">Oh, and by the way: copyright <strong>JRS<sup>86</sup></strong>. Don't steal.</small></p>
+    <p><small class="lightenup">Oh, and by the way: copyright <strong>JRS<sup>86</sup></strong>.<br>Be inspired, be enlightened; don't steal.</small></p>
   </div>
 </footer>
 
 <script src="//code.jquery.com/jquery-2.2.4.min.js" defer></script>
+<script src="js/blazy.min.js"></script>
+<script>
+  ;(function() {
+    // Initialize
+    var bLazy = new Blazy();
+  })();
+</script>
 <script>
   function downloadJSAtOnload() {
     var element = document.createElement("script");
