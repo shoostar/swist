@@ -439,15 +439,15 @@ a.skip-main:focus, a.skip-main:active {
 /* Parallax bullshit */
 .cover {
   color: var(--bg);
-	position: fixed;
-	top: 0;
-	z-index: 0;
   width: 100%;
   height: 30em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-  background: no-repeat 50% 50% / cover;
+  background-size: cover !important;
+}
+.parallax {
+  overflow: hidden;
 }
 
 
