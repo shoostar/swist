@@ -397,13 +397,13 @@ body{
 	background-color: var(--bg);
   color: var(--primary);
 }
-header *, footer * {
-  color: var(--bg);
-}
 footer {
   background: var(--primary);
   padding-bottom: calc(var(--gutter) * .3em) !important;
 }
+  footer * {
+    color: var(--bg);
+  }
 
 
 
@@ -438,12 +438,12 @@ a.skip-main:focus, a.skip-main:active {
 
 /* Parallax bullshit */
 .cover {
-  color: var(--primary);
-	position: absolute;
+  color: var(--bg);
+	position: fixed;
 	top: 0;
 	z-index: 0;
   width: 100%;
-  height: 40em;
+  height: 30em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
