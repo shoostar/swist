@@ -438,16 +438,20 @@ a.skip-main:focus, a.skip-main:active {
 
 /* Parallax bullshit */
 .cover {
+  background: color: var(--bg);
   color: var(--bg);
   width: 100%;
   height: 30em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-  background-size: cover !important;
+  background-size: 100% !important;
+  background-attachment: fixed;
 }
 .parallax {
   overflow: hidden;
+  position: relative;
+  z-index: 10 !important;
 }
 
 
@@ -492,7 +496,7 @@ figure {
     position: absolute;
     top: -100%;
     width: 300%;
-    opacity: 0.25;
+    opacity: 0.5;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
@@ -590,7 +594,7 @@ figure {
 
 
 /* UTILITIES */
-.lightenup { opacity: 0.1 !important; }
+.lightenup { opacity: 0.25 !important; }
 .topless { margin-top: 0 !important; }
 .bottomless { margin-bottom: 0 !important; }
 .text-center { text-align: center !important; }
@@ -606,4 +610,18 @@ figure {
   color: var(--bg);
   text-align: center;
 	border: 1px solid var(--bg);
+}
+
+
+
+
+.content {
+  z-index: 2;
+  position: relative;
+  padding: calc(var(--gutter) * .3em) 0;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  z-index: -3;
 }
