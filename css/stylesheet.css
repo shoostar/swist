@@ -445,10 +445,11 @@ a.skip-main:focus, a.skip-main:active {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-  background-size: 100% !important;
-  background-attachment: fixed;
+  background-size: cover !important;
+  background-repeat: none;
 }
 .parallax {
+  background-attachment: fixed;
   overflow: hidden;
   position: relative;
   z-index: 10 !important;
