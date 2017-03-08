@@ -448,6 +448,9 @@ a.skip-main:focus, a.skip-main:active {
   background-size: cover !important;
   background-repeat: none;
 }
+  .cover:not(:first-of-type) {
+    margin-top: calc(var(--gutter) * .3em);
+  }
 .parallax {
   background-attachment: fixed;
   overflow: hidden;
