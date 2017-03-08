@@ -12,7 +12,7 @@ function Parallax() {
 		'background-position' : '50% ' + (-scrollPos/4)+"px"
 	});
 	$('.parallax-content').css({
-		'margin-top': (scrollPos/4)+"px",
+		'margin-top': (scrollPos/2)+"px",
 		'opacity': 1-(scrollPos/250)
 	});
 }
