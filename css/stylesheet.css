@@ -103,7 +103,7 @@ body{
 	--columns: 8;
 }
 main {
-  background: var(--bg);
+  background: var(--bg) !important;
   width: 100%;
   margin: 0 auto;
   padding: 0 0 calc(var(--gutter) * .3em);

@@ -39,14 +39,6 @@ $(document).ready(function() {
   }
 });
 
-function scrollFooter(scrollY, heightFooter) {
-  if (scrollY >= heightFooter) {
-    $('footer').css({
-      'bottom': '0px'
-    });
-  } else {
-    $('footer').css({
-      'bottom': '-' + heightFooter + 'px'
-    });
-  }
-}
+function scrollFooter(scrollY, heightFooter) { if (scrollY >= heightFooter) {
+$('footer').css({ 'bottom': '0px' }); } else { $('footer').css({ 'bottom': '-' +
+heightFooter + 'px' }); } }
