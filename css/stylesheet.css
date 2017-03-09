@@ -309,7 +309,6 @@ blockquote p, blockquote cite {
 /* LISTS */
 ul {
   list-style: none inside;
-  list-style-type: disc;
 }
 ol {
   list-style: none inside;
@@ -329,9 +328,8 @@ ol ul {
   li {
     break-inside: avoid;
   }
-  ol li {
+  ol li, ul li {
     text-decoration: underline;
-    
   }
 
 
