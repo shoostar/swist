@@ -444,7 +444,7 @@ a.skip-main:focus, a.skip-main:active {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-  background-position: 50% 50%;
+  background-position: 50% 0%;
   background-size: cover !important;
   background-repeat: none;
 }
