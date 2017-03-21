@@ -442,7 +442,7 @@ a.skip-main:focus, a.skip-main:active {
   width: 100%;
   height: 30em;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
   background-position: 50% 0%;
   background-size: cover !important;
