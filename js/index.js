@@ -9,11 +9,11 @@ $('p').each(function() {
 function Parallax() {
 	scrollPos = $(this).scrollTop();
 	$('.parallax').css({
-		'background-position' : '50% ' + (-scrollPos/4)+"px"
+		'background-position' : '50% ' + (50 + scrollPos/50)+"%"
 	});
 	$('.parallax-content').css({
-		'margin-top': (scrollPos/2)+"px",
-		'opacity': 1-(scrollPos/250)
+		'margin-top': (scrollPos/1.5)+"px",
+		'opacity': 1-(scrollPos/500)
 	});
 }
 $(document).ready(function(){
