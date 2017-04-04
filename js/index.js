@@ -33,7 +33,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 } else
 {
   function Parallax() {
-  	scrollPos = $(document).scrollTop();
+  	scrollPos = $(this).scrollTop();
   	$('.parallax').css({
   		'background-position' : '50% ' + (50 + scrollPos/50)+"%"
   	});
