@@ -7,7 +7,10 @@ $('p').each(function() {
 
 // Footer reveal
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  $('div').removeClass('.content');
+  $('.content').css({
+    'padding-bottom': 0,
+    'margin-bottom': 0
+  });
   $('footer').css({
     'position': 'inherit'
   });
@@ -16,7 +19,8 @@ $(document).ready(function() {
   var footerHeight = $('footer').height();
 
   $('.content').css({
-    'margin-bottom': footerHeight + 'px'
+    'margin-bottom': footerHeight + 'px',
+    'position': 'relative'
   });
 
   scrollFooter(window.pageYOffset, footerHeight);
