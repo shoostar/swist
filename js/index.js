@@ -9,7 +9,7 @@ $('p').each(function() {
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   $('div').removeClass('.content');
   $('footer').css({
-    'position': 'relative'
+    'position': 'inherit'
   });
 } else
 $(document).ready(function() {
