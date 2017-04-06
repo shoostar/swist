@@ -32,7 +32,7 @@
 <main>
   <header class="row container cover parallax b-lazy" data-src="https://unsplash.it/g/2000/3000/?image=1033">
     <div class="gridlet__s--full parallax-content">
-      <h1>SWIST+</h1>
+      <h1>SWIST<span class="plus">+</span></h1>
       <h6>A SIMPLE WEB FRAMEWORK</h6>
     </div>
   </header>
@@ -45,10 +45,10 @@
     </div>
 		<div class="gridlet__s--full gridlet__l--4">
       <h5>Mathematically Simple</h5>
-			<p>Everything in <b>SWIST+</b> is calculated on the fly, from colors, width, and font sizes, to gutters, columns, margins and padding. Now that CSS3 allows for the use of variables without a preprocessor, we can explicitly set variables, and then use them wherever we please, just like using the <code>calc();</code> function, so that we can simply have the browser perform the math at run-time.</p>
+			<p>Everything in <b>SWIST<span class="plus">+</span></b> is calculated on the fly, from colors, width, and font sizes, to gutters, columns, margins and padding. Now that CSS3 allows for the use of variables without a preprocessor, we can explicitly set variables, and then use them wherever we please, just like using the <code>calc();</code> function, so that we can simply have the browser perform the math at run-time.</p>
       <p>The codebase is a bit fat right now, but I'm working on chunking it down as much as possible. The size of the index.html file will more than likely grow as I add new examples, but I'm going to do my best to trim back the rest. I am also going to include some other shit, like form inputs and generic article/media layouts.</p>
       <h5>Universal*</h5>
-			<p>While <b>SWIST+</b> may not work on older browsers (honestly though, what does nowadays? And who really cares?), it should be perfectly compatible with all the latest and greatest browsers, regardless of the device. <small class="lightenup"><em>&mdash; *almost</small></em></p>
+			<p>While <b>SWIST<span class="plus">+</span></b> may not work on older browsers (honestly though, what does nowadays? And who really cares?), it should be perfectly compatible with all the latest and greatest browsers, regardless of the device. <small class="lightenup"><em>&mdash; *almost</small></em></p>
 		</div>
     <div class="gridlet__s--full gridlet__l--4">
       <figure>
@@ -96,7 +96,7 @@
 
   <section class="row container cover parallax b-lazy" data-src="https://unsplash.it/g/2000/3000/?image=945">
     <div class="gridlet__s--full">
-      <h1>SWIST+</h1>
+      <h1>SWIST<span class="plus">+</span></h1>
       <h6>A SIMPLE WEB FRAMEWORK</h6>
     </div>
   </section>
@@ -108,14 +108,14 @@
     </div>
     <div class="gridlet__s--full gridlet__m--4 gridlet__l--4">
       <h5>Headache-free</h5>
-      <p><b>SWIST+</b> is setup in a way that there are no complicated math equations for sorting out gridlet widths, gutters, padding, or other sizing adjustments. Rather, it's based on the premise that device widths and pixel densities that your audience views your site on are unknown.</p>
+      <p><b>SWIST<span class="plus">+</span></b> is setup in a way that there are no complicated math equations for sorting out gridlet widths, gutters, padding, or other sizing adjustments. Rather, it's based on the premise that device widths and pixel densities that your audience views your site on are unknown.</p>
       <p>To simplify a 12-column layout, this can be expressed as <code>--columns: 12;</code>, and then for each grid item (gridlet), simply assign a width that defines how many columns it spans. Pass a <code>--width:</code> variable along to that gridlet, and the rest is done by your browser. Setting <code>--width: 3;</code> means that gridlet spans 3 columns out of the 12 available (as defined by <code>--columns: 12;</code>).</p>
       <h5>Agnostic</h5>
       <p>With CSS' latest spec being pushed widely across all modern web rendering engines, we can now use native CSS variables on just about any device, and not break the internet. However, it's still highly recommended that you refactor the CSS and place it on top of a preprocessor to make things a bit easier, and to add other functions.</p>
     </div>
     <div class="gridlet__s--full gridlet__m--4 gridlet__l--4">
       <h5>Responsive</h5>
-      <p>Currently, <b>SWIST+</b> has only 3 breakpoints on top of its default scale, but it's easy to add in your own. You need only to define how many columns a gridlet is to span, rather than having to calculate individual measurements for every container and breakpoint. Gridlets can be adjusted per-breakpoint by appending <code>gridlet__(size)--#</code> to that gridlet (or whatever naming convention you choose).</p>
+      <p>Currently, <b>SWIST<span class="plus">+</span></b> has only 3 breakpoints on top of its default scale, but it's easy to add in your own. You need only to define how many columns a gridlet is to span, rather than having to calculate individual measurements for every container and breakpoint. Gridlets can be adjusted per-breakpoint by appending <code>gridlet__(size)--#</code> to that gridlet (or whatever naming convention you choose).</p>
       <p>With the exception of your own CSS, everything should stack and un-stack cleanly, regardless of the breakpoint, gridlet size, or nesting. You only need to set at least one gridlet size, regardless of desired breakpoint.</p>
       <h5>Highly configurable</h5>
       <p>The first of the following examples is based on 8-columns, and while it wouldn't make sense to use so many oddball breakpoints for every single gridlet, but it just goes to show you how simple yet versatile this grid system can be. The second layout simply shows how you can not only extend the grid's container to the full-width of the screen, but adjust the column count on the fly as well. This example goes from having 8 columns to 9.</p>
@@ -294,7 +294,7 @@
       <h5>Expanded uses</h5>
       <p>This section is currently being worked on. It will include the remaining utility classes that I've included, such as gridlet offsets, tables, images, figures, and whatever else I feel is needed.</p>
       <h5>See it in action</h5>
-      <p>For an example of a page built using this grid system, please have a look <a href="../deimos">here</a>. I've also started working on a complete rebuild of <a href="http://nopp.com">NOPP's website</a>; stay tuned for updates on that project. I am also working on a couple more small demos to help showcase the versatility of <b>SWIST+</b>.</p>
+      <p>For an example of a page built using this grid system, please have a look <a href="../deimos">here</a>. I've also started working on a complete rebuild of <a href="http://nopp.com">NOPP's website</a>; stay tuned for updates on that project. I am also working on a couple more small demos to help showcase the versatility of <b>SWIST<span class="plus">+</span></b>.</p>
     </div>
     <div class="gridlet__s--full gridlet__m--3">
       <h6>INCLUDED</h6>
