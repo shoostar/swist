@@ -378,7 +378,7 @@ select:focus {
 }
 button, input[type=submit] {
   background: var(--primary) !important;
-  color: var(--secondary) !important;
+  color: var(--bg) !important;
   border: none;
   display: inline !important;
   padding: 0.25em 0.75em;
