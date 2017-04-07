@@ -230,7 +230,7 @@ pre, code {
     text-align: left;
   }
   code {
-    padding: 0.1em 0.25em 0.15em !important;
+    padding: 0.1em 0.125em 0.15em 0.25em !important;
     margin-bottom: 0 !important;
     white-space: pre;
     word-break: normal;
