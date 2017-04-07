@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>SWIST+</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="js/modernizr-custom.min.js"></script>
+  <style>
+    .b-lazy {
+      -webkit-transition: opacity 500ms ease-in-out;
+         -moz-transition: opacity 500ms ease-in-out;
+           -o-transition: opacity 500ms ease-in-out;
+              transition: opacity 500ms ease-in-out;
+      max-width: 100%;
+      opacity: 0;
+    }
+    .b-lazy.b-loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="content">
+
+<main>
+  <header class="row container">
+    <div class="gridlet__s--full">
+      <img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="img/logo.svg" style="width: 4em;"  />
+    </div>
+  </header>
+
+  <a class="skip-main" href="#main" tabindex="-1">Skip to main content</a>
+  <section class="row container">
+    <div class="gridlet__s--full">
+      <h1>A HIERARCHAEL MATH-BASED<br>UNASSUMING GRID SYSTEM</h1>
+    </div>
+	</section>
+
+  <section class="row container">
+    <div class="gridlet__s--4 gridlet__m--1 gridlet__l--1 demo">
+      <p>1</p>
+    </div>
+    <div class="gridlet__s--4 gridlet__m--3 gridlet__l--1 demo">
+      <p>2</p>
+    </div>
+    <div class="gridlet__s--full gridlet__m--2 gridlet__l--1 demo">
+      <p>3</p>
+    </div>
+    <div class="gridlet__s--2 gridlet__m--2 gridlet__l--1 demo">
+      <p>4</p>
+    </div>
+    <div class="gridlet__s--1 gridlet__m--2 gridlet__l--1 demo">
+      <p>5</p>
+    </div>
+    <div class="gridlet__s--3 gridlet__m--2 gridlet__l--1 demo">
+      <p>6</p>
+    </div>
+    <div class="gridlet__s--2 gridlet__m--3 gridlet__l--1 demo">
+      <p>7</p>
+    </div>
+    <div class="gridlet__s--7 gridlet__m--1 gridlet__l--1 demo">
+      <p>8</p>
+    </div>
+    <div class="gridlet__s--1 gridlet__m--5 gridlet__l--2 demo">
+      <p>9</p>
+    </div>
+    <div class="gridlet__s--2 gridlet__m--1 gridlet__l--2 demo">
+      <p>10</p>
+    </div>
+    <div class="gridlet__s--3 gridlet__m--1 gridlet__l--2 demo">
+      <p>11</p>
+    </div>
+    <div class="gridlet__s--3 gridlet__m--1 gridlet__l--2 demo">
+      <p>12</p>
+    </div>
+    <div class="gridlet__s--1 gridlet__m--4 demo">
+      <p>13</p>
+    </div>
+    <div class="gridlet__s--5 gridlet__m--4 demo">
+      <p>14</p>
+    </div>
+    <div class="gridlet__s--2 gridlet__m--full demo">
+      <p>15</p>
+    </div>
+  </section>
+
+  <section class="row container-alt">
+    <div class="gridlet__s--3 demo">
+      <p>1</p>
+    </div>
+    <div class="gridlet__s--3 demo">
+      <p>2</p>
+    </div>
+    <div class="gridlet__s--3 demo">
+      <p>3</p>
+    </div>
+  </section>
+</main>
+
+<footer class="row container">
+  <div class="gridlet__s--full gridlet__l--4">
+    <h5>Thanks for looking :)</h5>
+  </div>
+  <div class="gridlet__s--full gridlet__l--4">
+    <p>There shouldn't be any major issues or incompatibilities with this little 'framework', but if you do run across any issues, please post them in the <a href="https://github.com/shoostar/swist" target="_blank">Github repo</a>.</p>
+    <hr>
+    <p><a href="mailto:hi@jrs86.com?subject=hello">Email</a> &mdash;
+      <a href="https://linkedin.com/in/jonschuster" target="_blank" rel="noopener noreferrer">LinkedIn</a> &mdash;
+      <a href="https://twitter.com/jon_schuster" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </p>
+    <p><small class="lightenup">Copyright (forever), <strong>JRS<sup>86</sup></strong>. Be inspired, be enlightened; don't steal.</small></p>
+  </div>
+</footer>
+
+</div>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" defer></script>
+<script src="js/blazy.min.js"></script>
+<script>
+  ;(function() {
+    // Initialize
+    var bLazy = new Blazy();
+  })();
+</script>
+<script>
+  function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "js/index.min.js";
+    document.body.appendChild(element);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+</script>
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'huh6mpu',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+</body>
+</html>
