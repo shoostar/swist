@@ -5,8 +5,9 @@ $('p').each(function() {
 
 
 
-// Footer reveal
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  $('header').removeClass('.parallax');
+  $('section').removeClass('.parallax');
   $('.content').css({
     'padding-bottom': 0,
     'margin-bottom': 0
@@ -14,34 +15,28 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   $('footer').css({
     'position': 'inherit'
   });
-} else
-$(document).ready(function() {
-  var footerHeight = $('footer').height();
+} else {
+  // Footer reveal
+  $(document).ready(function() {
+    var footerHeight = $('footer').height();
 
-  $('.content').css({
-    'margin-bottom': footerHeight + 'px',
-    'position': 'relative'
+    $('.content').css({
+      'margin-bottom': footerHeight + 'px',
+      'position': 'relative'
+    });
+
+    scrollFooter(window.pageYOffset, footerHeight);
+
+    window.onscroll = function() {
+      scrollFooter(window.pageYOffset, footerHeight);
+    }
   });
 
-  scrollFooter(window.pageYOffset, footerHeight);
+  function scrollFooter(scrollY, heightFooter) { if (scrollY >= heightFooter) {
+  $('footer').css({ 'bottom': '0px' }); } else { $('footer').css({ 'bottom': '-' +
+  heightFooter + 'px' }); } }
 
-  window.onscroll = function() {
-    scrollFooter(window.pageYOffset, footerHeight);
-  }
-});
-
-function scrollFooter(scrollY, heightFooter) { if (scrollY >= heightFooter) {
-$('footer').css({ 'bottom': '0px' }); } else { $('footer').css({ 'bottom': '-' +
-heightFooter + 'px' }); } }
-
-
-
-// Simple parallax background
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  $('header').removeClass('.parallax');
-  $('section').removeClass('.parallax');
-} else
-{
+  // Simple parallax background
   function Parallax() {
   	scrollPos = $(this).scrollTop();
   	$('.parallax').css({

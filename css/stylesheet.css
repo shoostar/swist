@@ -225,13 +225,12 @@ pre, code {
   word-wrap: break-word !important;
 }
   pre {
-    padding: 1em 0.5rem;
-    margin: 1.25rem 0 !important;
-    display: block;
+    margin: 1.25em 0 !important;
+    display: inline-block;
     text-align: left;
   }
   code {
-    padding: 0.1rem 0.5rem 0.15rem !important;
+    padding: 0.1em 0.25em 0.15em !important;
     margin-bottom: 0 !important;
     white-space: pre;
     word-break: normal;
