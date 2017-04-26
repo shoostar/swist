@@ -107,14 +107,14 @@ main {
   background: var(--bg) !important;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0 calc(var(--gutter) * .3em);
+  padding: 0;
   position: relative;
   z-index: 3;
 }
 .container {
   width: 100%;
   margin: 0 calc(var(--gutter) * .15em);
-  padding: calc(var(--gutter) * .3em) 0 0;
+  padding: calc(var(--gutter) * .3em) 0;
 }
 .container-alt {
   width: 100%;
