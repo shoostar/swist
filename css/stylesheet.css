@@ -116,12 +116,6 @@ main {
   margin: 0 calc(var(--gutter) * .15em);
   padding: calc(var(--gutter) * .3em) 0;
 }
-.container-alt {
-  width: 100%;
-  margin: 0;
-  padding: calc(var(--gutter) * .3em) 0 0;
-  --columns: 9;
-}
   @media (min-width: 900px ) {
     .container {
       padding-left: calc(var(--gutter) * 0.5em);
