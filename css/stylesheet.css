@@ -111,19 +111,19 @@ main {
   position: relative;
   z-index: 3;
 }
-.container {
+[class*="container-"], .container {
   width: 100%;
   margin: 0 calc(var(--gutter) * .15em);
   padding: calc(var(--gutter) * .3em) 0;
 }
   @media (min-width: 900px ) {
-    .container {
+    [class*="container-"], .container {
       padding-left: calc(var(--gutter) * 0.5em);
       padding-right: calc(var(--gutter) * 0.5em);
     }
   }
   @media (min-width: 1400px ) {
-    .container {
+    [class*="container-"], .container {
       padding-left: calc(var(--gutter) * 1em);
       padding-right: calc(var(--gutter) * 1em);
     }
