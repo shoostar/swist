@@ -3,37 +3,6 @@ $('p').each(function() {
   $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1'));
 });
 
-
-
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  $('header').removeClass('.parallax');
-  $('section').removeClass('.parallax');
-  $('.content').css({
-    'padding-bottom': 0,
-    'margin-bottom': 0
-  });
-  $('footer').css({
-    'position': 'inherit'
-  });
-} else {
-  // Simple parallax background
-  function Parallax() {
-  	scrollPos = $(this).scrollTop();
-  	$('.parallax').css({
-  		'background-position' : '50% ' + (50 + scrollPos/50)+"%"
-  	});
-  	$('.parallax-content').css({
-  		'margin-top': (scrollPos/1.5)+"px",
-  		'opacity': 1-(scrollPos/250)
-  	});
-  }
-  $(document).ready(function(){
-  	$(window).scroll(function() {
-  		Parallax();
-  	});
-  });
-}
-
 // Glitch
 var Glitch = function() {
   function Glitch() {
@@ -102,3 +71,33 @@ $(document).ready(function() {
 
   displayNewQuote();
 });
+
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  $('header').removeClass('.parallax');
+  $('section').removeClass('.parallax');
+  $('.content').css({
+    'padding-bottom': 0,
+    'margin-bottom': 0
+  });
+  $('footer').css({
+    'position': 'inherit'
+  });
+} else {
+  // Simple parallax background
+  function Parallax() {
+  	scrollPos = $(this).scrollTop();
+  	$('.parallax').css({
+  		'background-position' : '50% ' + (50 + scrollPos/50)+"%"
+  	});
+  	$('.parallax-content').css({
+  		'margin-top': (scrollPos/1.5)+"px",
+  		'opacity': 1-(scrollPos/250)
+  	});
+  }
+  $(document).ready(function(){
+  	$(window).scroll(function() {
+  		Parallax();
+  	});
+  });
+};
