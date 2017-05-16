@@ -1,0 +1,135 @@
+@import url('./logo.css');
+
+.b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
+     -moz-transition: opacity 500ms ease-in-out;
+       -o-transition: opacity 500ms ease-in-out;
+          transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+.b-lazy.b-loaded {
+  opacity: 1;
+}
+.container {
+  margin: 0;
+  padding: calc(var(--gutter) * .3em) 0 0;
+  --columns: 18 !important;
+}
+:root{
+  --primary: rgb(202, 40, 27);
+  --secondary: rgb(10, 22, 22);
+  --bg: rgb(10, 9, 9);
+  --white: rgb(255, 255, 255);
+}
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+::-webkit-scrollbar-track {
+  border: none;
+  background-color: var(--bg);
+}
+
+main {
+  background-color: transparent !important;
+}
+
+  @media (min-width: 900px ) {
+    .container {
+      padding-left: calc(var(--gutter) * 0.25em);
+      padding-right: calc(var(--gutter) * 0.25em);
+    }
+  }
+  @media (min-width: 1400px ) {
+    .container {
+      padding-left: calc(var(--gutter) * 0.5em);
+      padding-right: calc(var(--gutter) * 0.5em);
+    }
+  }
+
+
+
+
+
+
+  /* PORTFOLIO SHIT */
+
+  /* TAP!!! */
+  button.tap {
+    width: 3em;
+    height: 3em;
+    border-radius: 1.5em;
+    background: none;
+    border: 0.1875em dotted var(--white);
+    color: var(--white);
+    position: absolute;
+    z-index: 50;
+    top: 1.5em;
+    right: 1.5em;
+    display: block;
+    text-align: center !important;
+    padding: 0 0 0.25em;
+    opacity: 0.5;
+  }
+
+
+
+  .portfolio-item {
+    margin-bottom: var(--gutter);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+    .portfolio-item figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: var(--gutter);
+      position: relative;
+      z-index: 100;
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
+    }
+      .portfolio-item figcaption:hover {
+        opacity: 1;
+      }
+      .portfolio-item figcaption span {
+        margin-bottom: 5em;
+      }
+      @media screen and (max-width: 799px) {
+        .portfolio-item, .portfolio-item figcaption {
+          height: 17.5em;
+        }
+      }
+
+  @media screen and (min-width: 1200px) {
+    .open-project {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: var(--gutter);
+      color: var(--white) !important;
+    }
+  }
+  .spread {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .shadowed {
+    box-shadow: 0 0.5em 1em var(--bg);
+  }
+
+  .portfolio-nav {
+    background-color: var(--bg);
+    padding: var(--gutter) 0;
+  }
